@@ -21,4 +21,6 @@
                                                             -Ai 
                                                             - be able to change settings of game 
                                                             -difficulty 
+                                                            - player vs player
+                                                            - campaign mode
                                                             
