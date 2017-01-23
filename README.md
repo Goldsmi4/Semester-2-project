@@ -7,3 +7,17 @@
 
 +                                AK will be doing the start menu / main menu for beginning of week 2 
 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+                                                             features
+                                                             
+                                                            -main menu start screen 
+                                                            - paddle movement 
+                                                            - ball movement 
+                                                            -game boundaries
+                                                            - brick pop ups (breakable and un-breakable)
+                                                            - power ups 
+                                                            -Ai 
+                                                            - be able to change settings of game 
+                                                            -difficulty 
