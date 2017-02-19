@@ -10,12 +10,12 @@ point so you can escape the infection.
 
 # Game Mechanics 
 
-The player starts off in their kitchen with a kitchen knife. they must explore the area, enter buildings and scavenge for useful things 
-such as ammo, weapons, armor, medkits and other survivors which you will need to reach the evacuation point. There are two options when it
-comes to dealing with an encountered enemy. You can leave them be and quietly get past them (ideal for conserving ammo or if there are too
-many) or attack using the weapons you have and any terrain features that may help. The combat works using turn based strategy as in you
-issue orders to the chatacters and they will attempt to carry them out. Be warned, Leaving them has the potential to come back to haunt you
-if they become startled by loud noises (e.g. gunfire, explosions etc.).
+The player starts off in their kitchen with a kitchen knife. they must explore the area, enter buildings and scavenge for useful things
+such as ammo, weapons, armor, medkits, consumeables and other survivors which you will need to reach the evacuation point. There are two
+options when it comes to dealing with an encountered enemy. You can leave them be and quietly get past them (ideal for conserving ammo or if
+there are too many) or attack using the weapons you have and any terrain features that may help. The combat works using turn based strategy
+as in you issue orders to the chatacters and they will attempt to carry them out. Be warned, Leaving them has the potential to come back to
+haunt you if they become startled by loud noises (e.g. gunfire, explosions etc.).
 
 # Player attributes - 
 Hp - players have 20 points of Hp
@@ -105,33 +105,9 @@ Offices - can find survivors or medkits.
 
 Pharmacy - high chance for medkits, high chance that it is empty as it has already been looted.
 
-Shop - always have food, chance for conflict.
+Shop - always have food, high chance for consumeables, chance for conflict.
 
 Panic rooms - safe, secure rooms where you can carry out actions in saftey.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
