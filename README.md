@@ -18,7 +18,15 @@ issue orders to the chatacters and they will attempt to carry them out. Be warne
 if they become startled by loud noises (e.g. gunfire, explosions etc.).
 
 # Player attributes - 
-Hp, Injuries, Gender, equipped weapon, secondary weapon
+Hp - players have 20 points of Hp
+
+Injuries - List of injuries they have incurred
+
+Gender
+
+equipped weapon -  weapon that the chatacter has in their hands and uses it instinctively when ambushed
+
+secondary weapon - can be changed to without using up the chatacters turn
 
 # Player skills - 
 Shooting, melee, medicine, agility, stealth, will
