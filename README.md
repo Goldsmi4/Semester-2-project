@@ -1,6 +1,6 @@
 # Semester-2-project
 Text based adventure                                                   
-                                                 ### Quarantine - Zombie Survival Game ### 
+#                                                ### Quarantine - Zombie Survival Game ### 
                                                    
 Plot - 
 A strain of rabies capable of reanimating and controlling dead hosts has escaped a CDC research facility in Manhattan. It has 
@@ -8,7 +8,7 @@ contaminated the entire manhattan island overnight forcing the army to contain t
 up to the news the following morning. You must arm yourself, find other survivors and fight your way across manhattan to the evacuation
 point so you can escape the infection.
 
-######## Game Mechanics ###############
+# Game Mechanics 
 
 The player starts off in their kitchen with a kitchen knife. they must explore the area, enter buildings and scavenge for useful things 
 such as ammo, weapons, armor, medkits and other survivors which you will need to reach the evacuation point. There are two options when it
