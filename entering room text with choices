@@ -1,0 +1,26 @@
+#                                        entering room text with choices
+
+You open the door quietly and see << number of enemy >> << enemy >> on the far side of the room. They havent noticed you. 
+
+Choices:
+1) << character >> attacks with << equipped weapon >> 
+2) << chatacter >> switches to << secondary weapon >> 
+3) << chatacter >> sneaks closer 
+4) look around the room for anything you could use to fight them
+5) << chatacter >> leave and close the door
+
+Choose a numbered option from above 
+
+
+You open the door quietly and see << number of enemy >> << enemy >> on the far side of the room. The door creaks, startling them. They turn and see you in the doorway.
+
+Choices:
+1) << character >> attacks with << equipped weapon >> 
+2) << chatacter >> switches to << secondary weapon >> 
+3) look around the room for anything you could use to fight them
+4) Leave quickly slaming the door behind you
+
+
+You open the door quietly, there are no enemies inside that you can see.
+
+Choices
