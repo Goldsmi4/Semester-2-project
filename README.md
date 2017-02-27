@@ -43,6 +43,8 @@ Sniper rifle - long range weapon that excels in long range combat, poor in close
 
 pistol - common weapon that is ok in all senarios apart from ranged.
 
+Flamethrower - very rare, very effective against hordes
+
 # Attachments: only one can be equipped at a time
 
 Bayonet - can be attached to guns in case they get too close, made using a kitchen knife and gaffa tape
