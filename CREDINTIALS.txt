@@ -1,0 +1,6 @@
+quarantine
+
+host: 	mysql.hostinger.co.uk
+db: 	u634003106_main
+user:	u634003106_user
+pw:     quarantine
