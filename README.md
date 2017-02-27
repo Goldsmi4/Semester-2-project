@@ -43,6 +43,9 @@ Sniper rifle - long range weapon that excels in long range combat, poor in close
 
 pistol - common weapon that is ok in all senarios apart from ranged.
 
+Molotov cocktail - Throwable, craftable (using one glass bottle, fuel, 2 shredded magazines), one use item. Good for area denial and 
+attacking zombie hordes. chance to attract more enemies.
+
 Flamethrower - very rare, very effective against hordes
 
 # Attachments: only one can be equipped at a time
