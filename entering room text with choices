@@ -23,4 +23,32 @@ Choices:
 
 You open the door quietly, there are no enemies inside that you can see.
 
-Choices
+Choices:
+1) Hit the door with << equipped weapon >> to see if there are any others inside
+2) Look around the building for anything useful
+3) leave
+
+
+You run into the << room name >> to escape the << enemy >>. they attack the door behind you making alot of noise.
+
+Choices: 
+1) barricade the door
+2) look for another exit
+3) open the door slightly and start attacking them
+4) look out the window and see if there is anything that could draw them away or take them out
+
+You run into the << room name >> to escape the << enemy >>. they attack the door behind you making alot of noise. You hear movement upstairs
+Choices: 
+1) barricade the door
+2) look for another exit
+3) open the door slightly and start attacking them
+4) look out the window and see if there is anything that could draw them away or take them out
+5) Investigate upstairs
+
+
+
+
+
+
+
+
