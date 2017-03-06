@@ -34,11 +34,11 @@ void start_game()
     cout << "there is an evac point across the other side of manhattan" << endl;
     cout << "what do you do ? " << endl;
     
-    cout << "\t >> 1: go outside " << endl;
-    cout << "\t >> 2: get in the car and drive off " << endl;
-    cout << "\t >> 3: gather supplies" << endl;
-    cout << "\t >> 4: stay indoors" <<endl;
-    cout << "\t >> 5: call family "
+    cout << "\t >> 1: go outside " << endl;                             //Dil
+    cout << "\t >> 2: get in the car and drive off " << endl;           //Tim
+    cout << "\t >> 3: gather supplies" << endl;                         //Will
+    cout << "\t >> 4: stay indoors" <<endl;                             //Hashim
+    cout << "\t >> 5: call family " <<endl;                             //ak
     
     retry:
     cout << "\n choose your start point "+ name << endl;
