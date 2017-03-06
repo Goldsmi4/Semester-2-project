@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <stdio.h>
-#inlcude <conio.h>
+#include <conio.h>
 #include <stdlib.h>
 #include "game.h"
 #include "game_title.h"
