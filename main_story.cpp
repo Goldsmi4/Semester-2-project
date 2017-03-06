@@ -36,7 +36,9 @@ void start_game()
     
     cout << "\t >> 1: go outside " << endl;
     cout << "\t >> 2: get in the car and drive off " << endl;
-    cout << "\t >> 3: gather supplies and find others and make your way across manhattan" << endl;
+    cout << "\t >> 3: gather supplies" << endl;
+    cout << "\t >> 4: stay indoors" <<endl;
+    cout << "\t >> 5: call family "
     
     retry:
     cout << "\n choose your start point "+ name << endl;
@@ -44,6 +46,8 @@ void start_game()
     
     if(storyline_path == 1)
     {
+        
+            
         cout << "\n!!!----------------------Chapter One: Escape----------------------!!!" << endl;
         cout << "\nYou: Where are we going?" << endl;
         cout << "Chief: Soon you will know. Just follow me." << endl;
@@ -59,7 +63,9 @@ void start_game()
         cout << "# and run off towards the City Wall." << endl;
     }
     else if(storyline_path == 3)
+        
     {
+        void (safe_option)
         cout << "\n!!!----------------------Chapter One: Escape----------------------!!!" << endl;
         cout << "\nYou: I am going to find a way out!" << endl;
         cout << "Chief: You are insane. You will get killed out there." << endl;
