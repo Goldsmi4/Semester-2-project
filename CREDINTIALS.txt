@@ -1,4 +1,5 @@
 quarantine
+maybe call it dead island who knows :)
 
 host: 	mysql.hostinger.co.uk
 db: 	u634003106_main
