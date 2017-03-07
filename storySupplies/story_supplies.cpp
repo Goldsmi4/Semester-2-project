@@ -1,11 +1,16 @@
- 
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <stdlib.h>
+
 
 void (Supplies)
 
-system('cls');
+
 
 {
     int supplies_path;
+    
     cout << "you look around the house and grab everything you can realising" << endl;
     cout << "that everything is too heavy to carry with you.   " << endl;
     cout << "what do you priorities first ?" << endl;
