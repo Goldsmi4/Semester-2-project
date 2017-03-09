@@ -3,24 +3,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "game_title.h"
+#include <sstream>
 using namespace std;
 
 void start_game()
     
     {
 
-
-        char name[30];
-        cout << "please input player name:  " << endl;
-        cin.getline(name, 30);
-        cout << "You better move fast, " << name << ". The goblins are attacking the city." << endl;
-        cout << "\n----------------------Press any key to continue----------------------" << endl;
-
-        return;
+         
+        string name= "";
     
-
+        cout<< "please input player name: \n>";
+        getline(cin,name);
     
+        cout << "You better move fast, " << name << ". The zombies are attacking the city." << endl;
+        cout << "----------------------Press any key to continue----------------------" << endl;
+
         
+    
+    
+    
+
+        
+    
         int storyline_path;
 
         cout << "A strain of rabies capable of reanimating and controlling dead hosts" << endl;
@@ -73,6 +78,8 @@ void start_game()
         }
 
         cout << "\n----------------------Press key to continue----------------------" << endl;
+    
+    
 
-
+        return;
     }
