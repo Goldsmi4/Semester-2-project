@@ -88,8 +88,60 @@ int npc_attack() {
                 cout << "invalid input, try again" << endl;  
                 
         }
-        npcdamage = (attack-)
+        npcdamage = (attack-kick)-(npcDefence/attack);
         
+        if(npcDamage <0){
+            
+            npcDamage = 0 
+        }
+        
+        npcHealth = npcHealth - npcDamage;
+        
+        cout << "your attach has reduced the zombies health by "<< npcDamage << "!\n";
+        cin.get();
+        
+        if(npcHealth < 1) {
+            cout << " you have killed the zombie! \n";
+            cin.get();
+            return 0;
+            
+        }
+        
+        
+        cout << "the zombie still has" << npcHealth << "health left.\n";
+        damage= (npcAttack-agility) - (defence/npcAttack);
+        
+        if (damage <0) {
+            
+            damage=0
+            
+        }
+        
+        health=health - damage;
+        
+        cout << "you have lost " << damage << "health, you still have " << health << "health left\n";
+        
+        
+        if (health < 1){
+            
+            cout << " you died, would you like to start from checkpoint again, test your skills once more? [y/n]" << endl;
+           
+            cin.get();
+            return 0;
+            
+         }
+        
+        else{
+            
+            cout << " how would you like to attack?? \n"
+                
+                
+            }
+        }
+        
+        
+        
+            
         
     }
     
