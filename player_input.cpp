@@ -16,6 +16,7 @@ bool answer()
         if (entry =="yes" or entry == "Yes" or entry == "y" or entry == "Y") {
             valid_entry= true;
             return true;
+            
         }else if (entry =="No" || entry == "no" || entry == "N" || entry == "n"){
             valid_entry = true;
             return false;    
