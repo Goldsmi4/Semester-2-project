@@ -16,8 +16,7 @@ void kitchen ();
 void garage();
 
 
-
-int main()
+int supplies()
 {
     cout<<"line has been cut"<<endl;
     opt();
