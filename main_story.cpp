@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "game_title.h"
 #include <sstream>
+#include "storySupplies/story_supplies.h"
 using namespace std;
 
 void start_game()
@@ -66,6 +67,7 @@ void start_game()
             cout << "# and run off towards the City Wall." << endl;
         }
         else if(storyline_path == 3){
+            supplies();
             
             
             
