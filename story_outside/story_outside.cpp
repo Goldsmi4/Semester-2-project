@@ -4,11 +4,16 @@
 #include <stdlib.h>
 
 
+using namespace std;
 
-void(outside)
+
+
+int main()
+//void (outside)
 
 {
     int outside_path;
+    
     
     cout << "you walk outside and see multiple paths that lead to different districts" << endl;
     cout << "Which path will you take?" << endl;
@@ -19,13 +24,18 @@ void(outside)
     cout << "\t >> 4: Go to to an abandoned park" << endl;
  
     
+    cout << "Enter your choice: ";
+    cin >> outside_path;
+    
+    
+    
     if(outside_path == 1)
     {
-
+      cout << "you follow the alleyway path and discover it is a dead end, turn back!" <<endl;
     }
     else if(outside_path == 2)
     {
-
+     
     }
     else if(outside_path == 3)
     {
@@ -33,13 +43,25 @@ void(outside)
     }
     else if(outside_path == 4)
     
+    {
+        
+    }
+    
     else
     {
      cout << "enter valid input " << endl;
-        goto retry;   
+        
     }
  
     cout << "\n----------------------Press key to continue----------------------" << endl;
-    _getch();
+    
     
 }
+
+{
+    int input;
+    
+    cout <<
+    
+    
+
