@@ -21,13 +21,61 @@ void idiot()
         cout << "GAME OVER"<< endl;                         
     }
 }
+void person()
+{
+    int input;
+    {
+        cout << "you meet someone" <<endl;
+        cout << "Please select an option:" << endl
+        << "1.Join forces with the person " << endl
+        << "2.Run! " << endl;
+        cin >> input;
+        
+       switch(input)
+       {
+           case 1:
+               cout<<"Join forces with the person"<< endl;
+               break;
+           case 2:
+               cout<<"Shout for help"<< endl;
+               break;
+               
+       }
+          
+    }
+}
+
+void stranger()
+{
+    int input;
+    {
+        cout << "Hi my name is name i wanted your help to get to down town to escape this madness" <<endl;
+        cout << "Please select an option:" << endl
+        << "1.Join forces with the person " << endl
+        << "2.Run! " << endl;
+        cin >> input;
+        
+       switch(input)
+       {
+           case 1:
+               cout<<"Join forces with the person"<< endl;
+               person();
+               break;
+           case 2:
+               cout<<""<< endl;
+               break;
+               
+       }
+          
+    }
+}
 
 void temp(){
     int input;
     {
         cout << "9mm Pistol has been added to you're inventory" <<endl;
         cout << "Please select an option:" << endl
-        << "1. Go outside " << endl
+        << "1.Go outside " << endl
         << "2.Shout for help " << endl;
         cin >> input;
         
@@ -35,9 +83,11 @@ void temp(){
        {
            case 1:
                cout<<"Go outside"<< endl;
+               stranger();
                break;
            case 2:
                cout<<"Shout for help"<< endl;
+               stranger();
                break;
                
        }
@@ -101,7 +151,7 @@ void options()
            case 3:
                cout << "Hide " << endl;
                cout << "you die from starvation" << endl;
-               cout << "GAME OVER" << endl;
+               cout << "GAME OVER" << endl;       
                break;
            default:
                cout<<"invalid option please choose between 1 and 4"<< endl;
