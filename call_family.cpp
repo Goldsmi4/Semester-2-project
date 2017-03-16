@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "story_outside/story_outside.cpp"
 
 
 using namespace std;
@@ -83,7 +84,7 @@ void temp(){
        {
            case 1:
                cout<<"Go outside"<< endl;
-               stranger();
+               Outside_part();
                break;
            case 2:
                cout<<"Shout for help"<< endl;
