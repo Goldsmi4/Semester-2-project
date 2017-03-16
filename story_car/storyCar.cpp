@@ -15,11 +15,11 @@ int main()
         cout << "car and get in. After switching the engine on you see that there is little" << endl;
         cout << "fuel left in the tank. What should you do?" << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Look in the garage for fuel", "red" << endl;
-        cout << "/t 2: Try using a neighbours car, hope it has more fuel", "red" << endl; //
-        cout << "/t 3: ignore it, there should be enough", "red" << endl;
+        cout << "/t 1: Look in the garage for fuel" << endl;
+        cout << "/t 2: Try using a neighbours car, hope it has more fuel" << endl; //
+        cout << "/t 3: ignore it, there should be enough" << endl;
         cin >> input;
-        switch (input)
+        switch(input)
         {   
     
             case 1:    
@@ -60,8 +60,6 @@ int main()
 void main();
 //void car()
 int neighbourCar();// <------------------------------
-{
-    
     {
         cout << "You go up to the front door. how should you enter?" << endl;
         cout << "\n" << endl;
@@ -85,17 +83,16 @@ int neighbourCar();// <------------------------------
                 break;
                 
             case 3:   
-                
+                cout << "You go back to your car and drive off" << endl;
+                route_path()
                 break;
         }
         
     }
     
     
-}
-    
 void main();
-// void car()7
+// void car()
 {
     int killLooter();
     {
@@ -104,7 +101,7 @@ void main();
         cout << "/t 1: Yes" << endl;
         cout << "/t 2: No and leave" << endl;
         cin >> input;
-        switch (input)
+        switch(input)
         {
             case 1:
                 cout << "You sneak up behind him and kill them. You loot him and get his pistol" << endl;
@@ -136,7 +133,7 @@ void main();
         cout << "/t 2: Travel straight to the evacuation point. This will take you through residential areas but there is more chance to find things" << endl;
         cout << "/t 3: Go to the evacuation point via the gunshop downtown. There could be weapons there"
         cin >> input;
-        switch (input)
+        switch(input)
         {    
             case 1:
     
@@ -145,7 +142,7 @@ void main();
                 cout << "You stop the car and get out well short of the roadblock. you are close to the evacuation point" << endl;
                 cout << "and there are no other routes to take. So you approach the roadblock carefully. There seems to be noone there." <<endl;
                 
-                //ringroadShop();
+                ringroadShop();
        
                 break;
 
@@ -170,20 +167,21 @@ void main();
     }
 }
 
-int lootGunshop()
-{
+int lootGunshop(){
+    
     cout << "You reach the shop with no problems but you have attracted a group of zombies a few hundred meters behind you." << endl;
     cout << "The shop looks clear but you dont have long. do you loot the gunshop?" << endl;
     cout << "\n" << endl;
     cout << "/t 1: yes" <<endl;
     cout << "/t 2: no, they are too close." << endl;
     cin >> input;
-    switch (input)
+    switch(input)
     {
         case 1:
-            cout << "" << endl;
+            cout << "Knowing you dont have long you move quickly over to and into the shop. A quick look" << endl;
+            cout << "around and see some weapons secured to the wall. One of the rifles seems to be loosely secured" << endl;
             
-            
+            lootRifle()
             break;
         case 2:
             cout << "" << endl;
@@ -193,7 +191,100 @@ int lootGunshop()
     }
 }
 
+int lootRifle(){
+    cout << "The rifle was locked to its mount with a padlock. Knowing that the group of zombies is following you have a limited amount of time." <<endl:
+    cout << "Which room do you search for the key?" << endl;
+    cout << "\n" << endl;
+    cout << "/t 1: Manager's office" << endl;
+    cout << "/t 2: Accounting office" << endl;
+    cout << "/t 3: storage" << endl;
+    cin >> input;
+    switch(input)
     
+    {
+    
+        {
+    
+        }
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int ringroadShop()
+{
+    cout << "You climb over the barricade and get off the overpass. By the exit you see a shop." << endl;
+    cout << "Do you loot it?" << endl;
+    cout << "\n" << endl;
+    cout << "/t 1: Yes" << endl;
+    cout << "/t 2: no, i need to get out of here" << endl;
+    cin >> input;
+    switch (input)
+    {    
+        case 1:
+            cout << "You move over to the window and peek in" << endl;
+            
+            // enterShop()
+            
+            break;
+            
+        case 2:
+            cout << "you continue walking down the ringroad towards the evacuation point." << endl;
+            
+            
+            break;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+}
 
 
 
