@@ -5,27 +5,14 @@
 #include "game_title.h"
 #include <sstream>
 #include "storySupplies/story_supplies.h"
+#include "databaseStuff/db_class.h"
+
 using namespace std;
 
 void start_game()
     
     {
 
-         
-        string name= "";
-    
-        cout<< "please input player name: \n>";
-        getline(cin,name);
-    
-        cout << "You better move fast, " << name << ". The zombies are attacking the city." << endl;
-        cout << "----------------------Press any key to continue----------------------" << endl;
-
-        
-    
-    
-    
-
-        
     
         int storyline_path;
 
@@ -37,7 +24,7 @@ void start_game()
 
         cout << "\n you wake up to the news the following morning..." << endl; 
         cout << "there is an evac point across the other side of manhattan" << endl;
-        cout << "what do you do ? " << endl;
+        cout << "what do you do ? \n " << endl;
 
         cout << "\t >> 1: go outside " << endl;                             //Dil
         cout << "\t >> 2: get in the car and drive off " << endl;           //Tim
@@ -46,20 +33,17 @@ void start_game()
         cout << "\t >> 5: call family " <<endl;                             //ak
 
         retry:
-        cout << "\n choose your start point " + string(name) << endl;
+        cout << "\n choose your start point "<< endl;
         cin >> storyline_path;
 
         if(storyline_path == 1){
 
-
-            cout << "\n!!!----------------------Chapter One: Escape----------------------!!!" << endl;
             cout << "\nYou: Where are we going?" << endl;
             cout << "Chief: Soon you will know. Just follow me." << endl;
             cout << "# You run behind the chief." << endl;
         }
 
         else if(storyline_path == 2){
-            cout << "\n!!!----------------------Chapter One: Escape----------------------!!!" << endl;
             cout << "\nYou: I am going to find a way out!" << endl;
             cout << "Chief: You are insane. You will get killed out there." << endl;
             cout << "You: I have my secrets and I know my way out." << endl;
