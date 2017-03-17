@@ -5,19 +5,23 @@
 
 using namespace std;
 
-int main()
+
+    
+
 //int car()
-{
-    void car();
-}
+void car();
 
 //void car()
 
 
-
+int main()
 
  
-
+{
+    cout << "" << endl;
+    car();
+    return(0);
+}
 
 
 
@@ -41,6 +45,7 @@ int ringroadShop()
 {
     int input;
     {
+    retry_ringroadShop:
     cout << "You climb over the barricade and get off the overpass. By the exit you see a shop." << endl;
     cout << "Do you loot it?" << endl;
     cout << "\n" << endl;
@@ -61,6 +66,9 @@ int ringroadShop()
             
             
             break;
+        default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_ringroadShop;
     }
     }
 }
@@ -71,34 +79,108 @@ int ringroadShop()
 
 
 
+int apartmentSearch()
+{
+    int input;
+    {
+        retry_apartmentSearch:
+        cout << "On your way to the evacuation point you see an apartment and hear a person screaming for help." << endl;
+        cout << "from inside. Do you go inside to help." << endl;
+        cout << "\n" << endl;
+        cout << "/t 1: Yes" << endl;
+        cout << "/t 2: No, carry on to the exacuation point" << endl;
+        
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You head over cautiously, look through the main door" << endl
+                << "and see many dead zombies in the main corridor. One of the doors" <<endl
+                << "into an apartment is open. you move to it to investigate." << endl;
+                //apartmentSurvivor()
+                break;
+            case 2:
+                cout << "You continue on to the evacuation point" << endl;
+                //
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_apartmentSearch;
+        }    
+            
+        
+    }
+}
 
 
-
-
+int gunshopEscape()
+{
+    int input;
+    {
+        retry_gunshopEscape:
+        cout << "You run over to the door to reinforce it, toppeling a filing cabinet infront" << endl;
+        cout << "of the door and moving a nearby table infront of it too, barricading the door." << endl;
+        cout << "The Glass window on the door smashes as the zombies try to force their way in." << endl;
+        cout << "You also hear alot of movement upstairs. These are your options." << endl;
+        cout << "\n" << endl;
+        cout << "/t 1: Investigate upstairs cautiously" << endl;
+        cout << "/t 2: Look for an escape route" << endl;
+        
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "On the landing there are three zombies. As you back up down the stairs the steps creek." << endl
+                << "This causes them to rush you. you shoot two of them but the third tackles you and bites you" << endl
+                << "on the neck. You are dead." <<endl
+                << "\n Game over" << endl;
+            
+                break;
+            
+            case 2:
+                cout << "You dash over to the manager's office and see a window. You shoot it, climb out" << endl
+                << "and run down the street." << endl;
+                apartmentSearch();
+                break;
+        
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_gunshopEscape;
+        }
+        
+        
+        
+        
+    }
+    
+}
 
 
 int managerLock()
 {
     int input;
     {
-    cout << "you try several keys in the lock but none of them work. You have many more to try" << endl;
+    retry_managerLock:
+    cout << "You try several keys in the lock but none of them work. You have many more to try" << endl;
     cout << "but you hear the zombie group approaching. What do you do?" << endl;
     cout << "\n" << endl;
     cout << "/t 1: Leave, dont want to be stuck in here with them." << endl;
-    cout << "/t 2: Just try a few more." << endl;
+    cout << "/t 2: I have time to try a few more." << endl;
     cin >> input;
     switch(input)
     {
         case 1:
             cout << "You drop the keys you found and run to your car. You get in and drive off towards the evacuation point." << endl;
-            
+            apartmentSearch();
             break;
         case 2:
-            cout << "You try a couple more and eventually one works. You take the rifle and a few mags of ammunition." << endl
-            << "However, the zombie group is meters from the shop door, effectively trapping you in the shop." << endl;
-            
+            cout << "You try a couple more and eventually one works. You take the rifle and a few mags of ammunition and sling" << endl
+            << "the gun over your shoulder. However, the zombie group is meters from the shop door, effectively trapping you in the shop." << endl;
+            gunshopEscape();
             break;
-            
+        default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_managerLock;    
             
     }
 }}
@@ -109,6 +191,7 @@ int lootRifle()
 {
         int input;
         {
+    retry_lootRifle:
     cout << "The rifle was locked to its mount with a padlock. Knowing that the group of zombies is following you have a limited amount of time." <<endl;
     cout << "Which room do you search for the key?" << endl;
     cout << "\n" << endl;
@@ -127,14 +210,16 @@ int lootRifle()
         case 2:
             cout << "You look around the room, in the drawers of the desk, on the shelves and the cupboards." << endl
             << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl;
-            
+            apartmentSearch();
             break;
         case 3:
             cout << "You look around the room, in the drawers of the desk, on the shelves and the cupboards." << endl
             << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl;
-            
+            apartmentSearch();
             break;
-            
+        default:
+            cout << "Thats not an option, please choose one given" << endl;
+            goto retry_lootRifle;
     }}}
 
        
@@ -142,6 +227,7 @@ int lootGunshop()
     {
         int input;
         {
+        retry_lootGunshop:
     cout << "You reach the shop with no problems but you have attracted a group of zombies a few hundred meters behind you." << endl;
     cout << "The shop looks clear but you dont have long. do you loot the gunshop?" << endl;
     cout << "\n" << endl;
@@ -158,14 +244,18 @@ int lootGunshop()
             break;
         case 2:
             cout << " you get back into the car and continue driving to the extraction point." << endl;
-            
+            apartmentSearch();
             break;
-    }
-}}        
+    
+        default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_lootGunshop;
+    }}}        
 void route_path()
     {
         int input;
         {
+        retry_route_path:
         cout << "You reach the edge of the neighbourhood, which route do you want to take?" << endl;
         cout << "\n" << endl;
         cout << "/t 1: Take the ring road and travel around to the evacuation point. It could be safer but you are less likley to find anything" << endl;
@@ -201,7 +291,9 @@ void route_path()
                 lootGunshop();
                 
                 break;
-    
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_route_path;
         }
     }
 }
@@ -214,6 +306,7 @@ void route_path()
     {   
         int input;
         {
+        retry_killLooter:
         cout << "He doesnt notice you but he is armed with a pistol. Do you quietly kill him?" << endl;
         cout << "\n" <<endl;
         cout << "/t 1: Yes" << endl;
@@ -232,7 +325,9 @@ void route_path()
                 cout << "You sneak out and leave the house, you go straight to your car and drive off." <<endl;
                 route_path();
                 break;
-                
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_killLooter;    
                 
         }
     }
@@ -245,7 +340,8 @@ int neighbourCar()// <------------------------------
     {
         int input;
         {
-        cout << "You go up to the front door. how should you enter?" << endl;
+        retry_neighbourCar:
+        cout << "You go up to the front door and hear movement inside. how should you enter?" << endl;
         cout << "\n" << endl;
         cout << "/t 1: Front door" << endl;
         cout << "/t 2: Back door" << endl;
@@ -271,6 +367,9 @@ int neighbourCar()// <------------------------------
                 cout << "You go back to your car and drive off" << endl;
                 route_path();
                 break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_neighbourCar;
         }
         }
         
@@ -279,11 +378,11 @@ int neighbourCar()// <------------------------------
     
    
     
-void car();
 
 void car(){
         int input;
         {
+        retry_car:
         cout << "You grab your car keys and whatever is to hand. You then head down to the" << endl;
         cout << "car and get in. After switching the engine on you see that there is little" << endl;
         cout << "fuel left in the tank. What should you do?" << endl;
@@ -319,6 +418,9 @@ void car(){
                     route_path();
                     break;
         
-         }
+        default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_car;
+        }
         }
 }
