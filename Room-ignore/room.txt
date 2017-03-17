@@ -1,0 +1,44 @@
+TotalNumberOfRooms= 5
+
+RoomNumber= 1
+Name= Bedroom
+Description= You are in your bedroom,it is slightly messy but time is of the essence, pick up what you need 
+ExitsNumber= 2
+Exit1= bathroom
+Exit2= livingroom
+
+
+RoomNumber= 2
+Name= Bathroom
+Description= You are in the bathroom there might be something useful here....
+ExitsNumber= 3
+Exit1= kitchen
+Exit2= livingroom
+Exit3= Palace
+
+
+RoomNumber= 3
+Name= Livingroom
+Description= the living room, a place where you spend most of your time. theres bound to be something useful here.
+ExitsNumber= 2
+Exit1= kitchen
+Exit2= bathroom
+
+
+RoomNumber= 4
+Name= kitchen
+Description= the kitchen, a place of culinary attacks, or the perfect armoury
+ExitsNumber= 2
+Exit1= bathroom
+Exit2= garage
+
+
+
+RoomNumber= 5
+Name= garage
+Description= an escape route, should you choose to leave 
+ExitsNumber= 2
+Exit1= livingroom
+Exit2= Armory
+
+
