@@ -41,8 +41,104 @@ int main()
 
 
 
-int ringroadShop()
+
+
+
+
+
+
+
+
+
+int evacPointHorde()
 {
+    int input;
+    {
+        retry_evacPointHorde:
+        cout << "You have reached the evacuation site, it is surrounded by high fences" << endl; 
+        cout << "and a horde of zombies." << endl;
+        
+    
+    }
+}
+
+
+int apartmentChoice()
+{
+    int input;
+    {
+        retry_apartmentChoice:
+        cout << "" << endl;
+        cout << "Do you go in to help?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Yes they need my help" << endl;
+        cout << "/t 2: No too risky" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You move forward quickly to find the room they are in. The zombie group is approaching you." << endl
+                << "You find the room and dash inside and close the door behind you. As you get into the room one" << endl
+                << "of the zombies you thought was dead on the floor grabs yoour leg and bites it. The people in the" << endl
+                << "see this. As you finish barricading the door, one of the survivors grabs a pistol and shoots you." << endl
+                << "Then he proceeds to takes your things as your vision fades to black." << endl
+                << "" << endl
+                << "Game over" << endl;
+                break;
+                
+            case 2:
+                cout << "You quickly leave the way you came in and barricade the door behind you and continue" << endl
+                << "to the evacuation area" << endl;
+                evacPointHorde();
+                break;
+                
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_apartmentChoice;
+        }
+        
+        
+        
+        
+    }
+}
+
+
+int apartmentLoot()
+{
+    int input;
+    {
+        retry_apartmentLoot:
+        cout << "On your way to the evacuation point you see an apartment and hear people screaming for help" << endl;
+        cout << "from inside. Do you go inside to help." << endl;
+        cout << "\n" << endl;
+        cout << "/t 1: Yes." << endl;
+        cout << "/t 2: No, carry on to the exacuation point." << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You head over cautiously, look through the main door" << endl
+                << "and see many dead zombies in the main corridor. All the doors in the corridor" <<endl
+                << "are open and the floor is soaked with blood. You move to it to investigate." << endl
+                << "As you move in, you see a large group of zombies fall down the stairs at the" << endl
+                << "far end of the corridor as you hear people yelling for help from one of the doors." << endl;
+                apartmentChoice();
+                break;
+            case 2:
+                cout << "You continue on to the evacuation point" << endl;
+                evacPointHorde();
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_apartmentLoot;
+    }
+}
+
+
+
+int ringroadShop()
+{                               // error here????????
     int input;
     {
     retry_ringroadShop:
@@ -55,16 +151,19 @@ int ringroadShop()
     switch (input)
     {    
         case 1:
-            cout << "You move over to the window and peek in" << endl;
+            cout << "You move over to the window and peek in." << endl
+            << "" << endl
+            << "You enter the shop and look around. you find some food and medical supplies." << endl
+            << "You dont find anything else so you leave and carry on to the evacuation point." <<endl;
             
-            // enterShop()
+            apartmentLoot();
             
             break;
             
         case 2:
             cout << "you continue walking down the ringroad towards the evacuation point." << endl;
             
-            
+            apartmentLoot();
             break;
         default:
                 cout << "Thats not an option, please choose one given" << endl;
@@ -74,7 +173,43 @@ int ringroadShop()
 }
 
 
-
+int apartmentSurvivor()
+{
+    int input;
+    {
+        retry_apartmentSurvivor:
+        cout << "" << endl;
+        cout << "You approach the door and peak in through it. you see a man lying on the" << endl;
+        cout << "floor in agony with a bite marks on his legs and arms. it appears that he" << endl;
+        cout << "was responsible for the carnage in the hallway. You approach him to help," << endl;
+        cout << "how should you?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Treat his wound the best you can and move him to the bed" << endl;
+        cout << "/t 2: Look for his weapon and end it quickly for him" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You use some tshirts you find in a drawer to bandage up his wounds" << endl
+                << "and give him some painkillers found in the bathroom to numb his pain." << endl
+                << "you leave him some food and his pistol. You leave the building and walk to" << endl
+                << "the evacuation point" << endl;
+                
+                break;
+            case 2:
+                cout << "You rummage around the room and find his pistol amongst a pile of bloody clothes" << endl
+                << "you take aim at his head and just as you are about toshoot he says:" << endl
+                << "Please.... let me do it." << endl
+                << "you nod and hand him the pistol. You leave the building before he shoots and" << endl
+                << "walk to the evacuation point" << endl;
+                evacPointHorde();
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_apartmentSurvivor;
+        }
+    }
+}
 
 
 
@@ -97,11 +232,11 @@ int apartmentSearch()
                 cout << "You head over cautiously, look through the main door" << endl
                 << "and see many dead zombies in the main corridor. One of the doors" <<endl
                 << "into an apartment is open. you move to it to investigate." << endl;
-                //apartmentSurvivor()
+                apartmentSurvivor();
                 break;
             case 2:
                 cout << "You continue on to the evacuation point" << endl;
-                //
+                evacPointHorde();
                 break;
             default:
                 cout << "Thats not an option, please choose one given" << endl;
@@ -251,6 +386,7 @@ int lootGunshop()
                 cout << "Thats not an option, please choose one given" << endl;
                 goto retry_lootGunshop;
     }}}        
+
 void route_path()
     {
         int input;
@@ -336,7 +472,7 @@ void route_path()
         
         
         
-int neighbourCar()// <------------------------------
+int neighbourCar()
     {
         int input;
         {
@@ -423,4 +559,4 @@ void car(){
                 goto retry_car;
         }
         }
-}
+    }               // error here????????
