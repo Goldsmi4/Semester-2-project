@@ -4,52 +4,29 @@
 #include <stdlib.h>
 
 using namespace std;
-
-
-    
-
-//int car()
 void car();
 
-//void car()
-
-
-int main()
-
- 
+    
+int car_run()
 {
-    cout << "" << endl;
+    cout<<"==========================="<<endl;
     car();
     return(0);
 }
 
+//void evacRoof()
+//{
+//    int input;
+//    {
+//        retry_evacRoof:
+//        cout << "" << endl;
+//        cout << "" << endl;
+//        cout << "" << endl;
+//    }
+//}
 
 
-
-
-
-        
-
-    
-
-
-
-
-
-
-int evacRoof()
-{
-    int input;
-    {
-        retry_evacRoof:
-        cout << "" << endl;
-        cout << "" << endl;
-        cout << "" << endl;
-    }
-}
-
-
-int evacGateDash()
+void evacGateDash()
 {
     int input;
     {
@@ -82,7 +59,7 @@ int evacGateDash()
 }
 
 
-int evacInvest()
+void evacInvest()
 {
     int input;
     {
@@ -98,7 +75,7 @@ int evacInvest()
         {
             case 1:
                 cout << "You head over to the apartment and climb up to the roof." << endl;
-                evacRoof();
+                //evacRoof();
                 break;
                 
             case 2:
@@ -106,7 +83,7 @@ int evacInvest()
                 << "Looking inside it there is little to salvage but youdo find a flare." << endl
                 << "You then head to the roof" << endl;
                 // add flare to inventory
-                evacRoof();
+                //evacRoof();
                 break;
                 
             default:
@@ -121,7 +98,7 @@ int evacInvest()
 
 
 
-int evacDistract()
+void evacDistract()
 {
     int input;
     {
@@ -157,7 +134,7 @@ int evacDistract()
 }
 
 
-int evacPointHorde()
+void evacPointHorde()
 {
     int input;
     {
@@ -199,7 +176,7 @@ int evacPointHorde()
 }
 
 
-int apartmentChoice()
+void apartmentChoice()
 {
     int input;
     {
@@ -240,7 +217,7 @@ int apartmentChoice()
 }
 
 
-int apartmentLoot()
+void apartmentLoot()
 {
     int input;
     {
@@ -273,7 +250,7 @@ int apartmentLoot()
 
 
 
-int ringroadShop()
+void ringroadShop()
 {                               
     int input;
     {
@@ -309,7 +286,7 @@ int ringroadShop()
 }
 
 
-int apartmentSurvivor()
+void apartmentSurvivor()
 {
     int input;
     {
@@ -350,7 +327,7 @@ int apartmentSurvivor()
 
 
 
-int apartmentSearch()
+void apartmentSearch()
 {
     int input;
     {
@@ -384,7 +361,7 @@ int apartmentSearch()
 }
 
 
-int gunshopEscape()
+void gunshopEscape()
 {
     int input;
     {
@@ -427,7 +404,7 @@ int gunshopEscape()
 }
 
 
-int managerLock()
+void managerLock()
 {
     int input;
     {
@@ -458,7 +435,7 @@ int managerLock()
 
 
 
-int lootRifle()
+void lootRifle()
 {
         int input;
         {
@@ -496,7 +473,7 @@ int lootRifle()
     }}}
 
        
-int lootGunshop()
+void lootGunshop()
     {
         int input;
         {
@@ -576,7 +553,7 @@ void route_path()
         
         
 
-    int killLooter()
+    void killLooter()
     {   
         int input;
         {
@@ -610,7 +587,7 @@ void route_path()
         
         
         
-int neighbourCar()
+void neighbourCar()
     {
         int input;
         {

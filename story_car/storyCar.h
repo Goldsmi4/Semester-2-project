@@ -3,4 +3,4 @@
 
 using namespace std;
 
-void start_game();
+int car_run();
