@@ -1,27 +1,29 @@
 #include <iostream>
 #include <string>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
-
-
-    
-
-//int car()
 void car();
 
-//void car()
-
-
-int main()
-//int car_part()
- 
+    
+int car_run()
 {
-    cout << "" << endl;
+    cout<<"==========================="<<endl;
     car();
     return(0);
 }
+
+//void evacRoof()
+//{
+//    int input;
+//    {
+//        retry_evacRoof:
+//        cout << "" << endl;
+//        cout << "" << endl;
+//        cout << "" << endl;
+//    }
+//}
 
 
 

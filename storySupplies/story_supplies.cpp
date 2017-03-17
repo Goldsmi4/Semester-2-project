@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "../story_car/storyCar.h"
 
 
 
@@ -71,20 +72,19 @@ void office()
                
                break;
            case 2:
-               cout << "walking backwards takes you to a dead end" << endl;
-               cout << "try another direction or search the room" << endl;
-               goto retry_office;
+               cout << " walking down to your bedroom" << endl;
+               opt();
                
                break;
            case 3:
-               cout << "walking forward takes you to a dead end" << endl;
+               cout << "you cannot go left as there is a wall" << endl;
                cout << "try another direction or search the room" << endl;
                goto retry_office;
                
                break;
            case 4:
                cout << "you make your way to the bathroom" <<endl;
-               bathroom();
+               goto retry_office;
                
                break;
                
@@ -326,14 +326,14 @@ void kitchen(){
                exit(0);
                
            case 1:
-               cout << "walking forward takes you to the living room" << endl;
-               living_room();
+               cout << "you walk to the front door and go outside" << endl;
+               goto retry_kitchen;
                
                break;
            case 2:
-               cout << "walking forward takes you to a dead end" << endl;
-               cout << "try another direction or search the room" << endl;
-               goto retry_kitchen;
+               cout << "walking backwards, heading to garage" << endl;
+               garage();
+               
                
                break;
            case 3:
@@ -342,14 +342,14 @@ void kitchen(){
                
                break;
            case 4:
-               cout << "you have entered the garage" <<endl;
-               garage();
+               cout << "youve hit a wall, try a different direction or search room" << endl;
+               goto retry_kitchen;
                
                break;
                
            case 5:
-               cout <<"run down the stairs to the living_room"<<endl;
-               living_room();
+               cout <<"you cant run downstairs, your already here"<<endl;
+               goto retry_kitchen;
                
                break;
                
@@ -421,14 +421,14 @@ void bathroom(){
                
                break;
            case 3:
-               cout << "you walk out the bathroom and enter the ofice" << endl;
-               office();
+               cout << "you walk out the bathroom and enter the bedroom" << endl;
+               opt();
                
                break;
            case 4:
-               cout << "walking back to your bedroom" <<endl;
-               opt();
-               
+               cout<<"no exit that way"<<endl;
+               goto retry_bathroom;
+         
                break;
                
            case 5:
@@ -473,8 +473,8 @@ void garage (){
         retry_garage:
         cout << "your in the garage, there is a car " << endl;
         cout << "\t do you wish to take it "<<endl;
-        cout << "1.yes" <<endl;
-        cout << "2.no, you will return to the living room" <<endl;
+        cout << "[1] for yes" <<endl;
+        cout << "[2] for no and you will return to the living room" <<endl;
       
         
         
@@ -483,6 +483,7 @@ void garage (){
         
         if (input==1){
             cout <<" the outside is waiting for you, be careful" << endl;
+            car_run();
             
             
         }

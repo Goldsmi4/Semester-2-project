@@ -7,6 +7,7 @@
 #include "storySupplies/story_supplies.h"
 #include "story_outside/story_outside.h"
 #include "call_family.h"
+#include "story_car/storyCar.h"
 
 
 using namespace std;
@@ -28,11 +29,11 @@ void start_game()
         cout << "there is an evac point across the other side of manhattan" << endl;
         cout << "what do you do ? \n " << endl;
 
-        cout << "\t >> 1: go outside " << endl;                             //Dil
-        cout << "\t >> 2: call family " << endl;           //Tim
-        cout << "\t >> 3: gather supplies" << endl;                         //Will
-        cout << "\t >> 4: stay indoors" <<endl;                             //Hashim
-        cout << "\t >> 5: get in the car and drive off" <<endl;                             //ak
+        cout << "\t >> 1: go outside " << endl;                             
+        cout << "\t >> 2: call family " << endl;           
+        cout << "\t >> 3: gather supplies" << endl;                         
+        cout << "\t >> 4: get in the car and drive off" <<endl;                             
+        cout << "\t >> 5: stay indoors" <<endl;                             
 
         retry:
         cout << "\n choose your start point "<< endl;
@@ -51,6 +52,12 @@ void start_game()
         }
         else if(storyline_path == 3){
             supplies();
+   
+            
+        } 
+        else if(storyline_path == 4){
+            car_run();
+        
    
             
         } 
