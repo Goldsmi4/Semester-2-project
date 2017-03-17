@@ -5,7 +5,9 @@
 #include "game_title.h"
 #include <sstream>
 #include "storySupplies/story_supplies.h"
-#include "databaseStuff/db_class.h"
+#include "story_outside/story_outside.h"
+#include "call_family.h"
+
 
 using namespace std;
 
@@ -27,35 +29,32 @@ void start_game()
         cout << "what do you do ? \n " << endl;
 
         cout << "\t >> 1: go outside " << endl;                             //Dil
-        cout << "\t >> 2: get in the car and drive off " << endl;           //Tim
+        cout << "\t >> 2: call family " << endl;           //Tim
         cout << "\t >> 3: gather supplies" << endl;                         //Will
         cout << "\t >> 4: stay indoors" <<endl;                             //Hashim
-        cout << "\t >> 5: call family " <<endl;                             //ak
+        cout << "\t >> 5: get in the car and drive off" <<endl;                             //ak
 
         retry:
         cout << "\n choose your start point "<< endl;
         cin >> storyline_path;
 
         if(storyline_path == 1){
+            cout<<"goodluck young one, try and survive"<<endl;
+            outside_part();
+                
 
-            cout << "\nYou: Where are we going?" << endl;
-            cout << "Chief: Soon you will know. Just follow me." << endl;
-            cout << "# You run behind the chief." << endl;
         }
 
         else if(storyline_path == 2){
-            cout << "\nYou: I am going to find a way out!" << endl;
-            cout << "Chief: You are insane. You will get killed out there." << endl;
-            cout << "You: I have my secrets and I know my way out." << endl;
-            cout << "# You jump over the nearby broken fence" << endl;
-            cout << "# and run off towards the City Wall." << endl;
+            family();
+  
         }
         else if(storyline_path == 3){
             supplies();
+   
             
-            
-            
-        }       
+        } 
+    
 
 
         else{

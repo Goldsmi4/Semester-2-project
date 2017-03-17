@@ -7,7 +7,7 @@ using namespace std;
 void outside_path();
 
 //int main()
-int Outside_part()
+int outside_part()
 
 {
     cout << "" << endl;

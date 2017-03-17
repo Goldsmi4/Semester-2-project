@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 
+
 using namespace std;
 
 
@@ -18,9 +19,9 @@ void outside();
 
 
 
-int main()
+int supplies()
 {
-    cout<<"line has been cut"<<endl;
+    cout<<"==========================="<<endl;
     opt();
     return(0);
 }
@@ -482,6 +483,7 @@ void garage (){
         
         if (input==1){
             cout <<" the outside is waiting for you, be careful" << endl;
+            
             
         }
         

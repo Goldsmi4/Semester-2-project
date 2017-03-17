@@ -1,13 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
-#include "story_outside/story_outside.cpp"
+#include "story_outside/story_outside.h"
 
 
 using namespace std;
 
 void options();
 
-int main()
+int family()
 {
     cout<<"line has been cut"<<endl;
     options();
@@ -84,7 +84,7 @@ void temp(){
        {
            case 1:
                cout<<"Go outside"<< endl;
-               Outside_part();
+               outside_part();
                break;
            case 2:
                cout<<"Shout for help"<< endl;

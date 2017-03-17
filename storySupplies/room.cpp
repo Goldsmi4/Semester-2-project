@@ -3,6 +3,10 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <main_Story.h>
+#include <story_outside/story_outside.h>
+#include <call_family.h>
+
 using namespace std;
 
 enum en_NAVIGATION {FORWARD,BACKWARD,LEFT,RIGHT,DOWNSTAIRS};
@@ -288,6 +292,7 @@ int main()
     {
         case 1:
            cout << "leaving the house, careful out there" <<endl;
+            story_outside.main();
             break;
         case 2:
             cout <<"staying indoors..going back to livingroom " <<endl;
