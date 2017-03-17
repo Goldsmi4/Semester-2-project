@@ -1,7 +1,9 @@
 #include<iostream>
 #include<stdlib.h>
-#include <time.h>
+#include<time.h>
+#include<stdio.h>
 #include<ctime>
+#include "storyIndoors.h"
 using namespace std;
 
 void gameBegins();
@@ -180,7 +182,7 @@ class AnimalZombie: public Zombie {
 };
 //void stayIndoors;
 
-int main() {  
+int somethingElse() {  
     
     gameBegins();  
     return 0;
