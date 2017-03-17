@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -15,7 +15,7 @@ void car();
 
 
 int main()
-
+//int car_part()
  
 {
     cout << "" << endl;
@@ -27,10 +27,58 @@ int main()
 
 
 
-
+int evacAttackZombie()          //last function where the player has to defeat a small group of zombies
+{                               //before he can enter the safe zone and win.
+    
+    
+    
+    
+    {
+        
+        
+        
+        
+    }
+}
         
 
-    
+int evacRoofAttention()
+{
+    int input;
+    {
+        retry_evacRoofAttention:
+        cout << "Do you try and get their attention by yelling?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Yes, they can help me" << endl;
+        cout << "/t 2: No, Lets take a closer look" << endl;
+        cout << "" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You wave your arms and yell to get their attention. They dont respond. You hear lots of" << endl
+                << "stumbling a floor below you and suddenly the internal roof access door flies open. You are rushed" << endl
+                << "by a large group of zombies. You are in no position to fight them so you turn and run for the external"
+                << "roof access ladder but trip on one of the cables running across the roof. They grab you. You are dead" << endl
+                << "" << endl
+                << "Game over" << endl;
+                break;
+                
+            case 2:
+                cout << "You look closer at the people in the evacuation point and see they are zombies." << endl
+                << "after looking around for a while, the bus seems to be the safest way into the site." << endl
+                << "You climb down from the apartment roof and make your way quietly to the nearest building" << endl
+                << "to the bus. When you are there you wait for an opportunity to run over. After some time the zombies" << endl
+                << "disperse leaving three of them between you and the bus. More are wondering towards the bus so you make" << endl
+                << "your move." << endl;
+                evacAttackZombie();
+                break;
+            
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_evacRoofAttention;
+    }}
+}
 
 
 
@@ -42,9 +90,34 @@ int evacRoof()
     int input;
     {
         retry_evacRoof:
+        cout << "Once on the roof you look around the evacuation point fro any ways in. You see a bus that has" << endl;
+        cout << "rammed the fence but didnt make it through. Its roof is high enough for you to use it to climb" << endl;
+        cout << "over the fence. Do you try this?" << endl;
         cout << "" << endl;
+        cout << "/t 1: Yes, looks like the best option" << endl;
+        cout << "/t 2: No, look for another safer way in" << endl;
         cout << "" << endl;
-        cout << "" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You climb down from the apartment roof and make your way quietly to the nearest building" << endl
+                << "to the bus. When you are there you wait for an opportunity to run over. After some time the zombies" << endl
+                << "disperse leaving three of them between you and the bus. More are wondering towards the bus so you make" << endl
+                << "your move." << endl;
+                //insert fight function here ;
+                evacAttackZombie();
+                break;
+                
+            case 2:
+                cout << "You continue to look around and eventually see people in the evacuation point wondering around" << endl;
+                evacRoofAttention();
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_evacRoof;
+                
+        }
     }
 }
 
@@ -59,12 +132,14 @@ int evacGateDash()
         cout << "" << endl;
         cout << "/t 1: Yes its now or never" << endl;
         cout << "/t 2: No wait for them to move from the gate" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
             case 1:
                 cout << "You move towards the gate and attack the zombies in your way." << endl;
                 // attack the zombies function here
+                evacAttackZombie();
                 break;
             case 2:
                 cout << "You wait even longer for them to move but the noise behind you turns out to be a" << endl
@@ -104,7 +179,7 @@ int evacInvest()
             case 2:
                 cout << "You walk over to the vehicle to try and find anything useful" << endl
                 << "Looking inside it there is little to salvage but youdo find a flare." << endl
-                << "You then head to the roof" << endl;
+                << "You then head to the roof and climb up." << endl;
                 // add flare to inventory
                 evacRoof();
                 break;
@@ -168,6 +243,7 @@ int evacPointHorde()
         cout << "/t 1: Look around first to try and find an easier way in" << endl;
         cout << "/t 2: Make a distraction and run for the main gate" << endl;
         cout << "/t 3: Use a car to ram the gate to get in" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -209,6 +285,7 @@ int apartmentChoice()
         cout << "" << endl;
         cout << "/t 1: Yes they need my help" << endl;
         cout << "/t 2: No too risky" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -250,6 +327,7 @@ int apartmentLoot()
         cout << "\n" << endl;
         cout << "/t 1: Yes." << endl;
         cout << "/t 2: No, carry on to the exacuation point." << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -283,6 +361,7 @@ int ringroadShop()
     cout << "\n" << endl;
     cout << "/t 1: Yes" << endl;
     cout << "/t 2: no, i need to get out of here" << endl;
+    cout << "" << endl;
     cin >> input;
     switch (input)
     {    
@@ -322,6 +401,7 @@ int apartmentSurvivor()
         cout << "" << endl;
         cout << "/t 1: Treat his wound the best you can and move him to the bed" << endl;
         cout << "/t 2: Look for his weapon and end it quickly for him" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -360,7 +440,7 @@ int apartmentSearch()
         cout << "\n" << endl;
         cout << "/t 1: Yes" << endl;
         cout << "/t 2: No, carry on to the exacuation point" << endl;
-        
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -396,7 +476,7 @@ int gunshopEscape()
         cout << "\n" << endl;
         cout << "/t 1: Investigate upstairs cautiously" << endl;
         cout << "/t 2: Look for an escape route" << endl;
-        
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -437,6 +517,7 @@ int managerLock()
     cout << "\n" << endl;
     cout << "/t 1: Leave, dont want to be stuck in here with them." << endl;
     cout << "/t 2: I have time to try a few more." << endl;
+    cout << "" << endl;
     cin >> input;
     switch(input)
     {
@@ -469,6 +550,7 @@ int lootRifle()
     cout << "/t 1: Manager's office" << endl;
     cout << "/t 2: Accounting office" << endl;
     cout << "/t 3: storage" << endl;
+    cout << "" << endl;
     cin >> input;
     switch(input)
     {
@@ -506,6 +588,7 @@ int lootGunshop()
     cout << "\n" << endl;
     cout << "/t 1: yes" <<endl;
     cout << "/t 2: no, they are too close." << endl;
+    cout << "" << endl;
     cin >> input;
     switch(input)
     {
@@ -535,6 +618,7 @@ void route_path()
         cout << "/t 1: Take the ring road and travel around to the evacuation point. It could be safer but you are less likley to find anything" << endl;
         cout << "/t 2: Travel straight to the evacuation point. This will take you through residential areas but there is more chance to find things" << endl;
         cout << "/t 3: Go to the evacuation point via the gunshop downtown. There could be weapons there" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {    
@@ -585,6 +669,7 @@ void route_path()
         cout << "\n" <<endl;
         cout << "/t 1: Yes" << endl;
         cout << "/t 2: No and leave" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {
@@ -620,6 +705,7 @@ int neighbourCar()
         cout << "/t 1: Front door" << endl;
         cout << "/t 2: Back door" << endl;
         cout << "/t 3: Leave it and go back to your car" << endl;
+        cout << "" << endl;
         cin >> input;
         
         switch (input)
@@ -664,6 +750,7 @@ void car(){
         cout << "/t 1: Look in the garage for fuel" << endl;
         cout << "/t 2: Try using a neighbours car, hope it has more fuel" << endl; //
         cout << "/t 3: ignore it, there should be enough" << endl;
+        cout << "" << endl;
         cin >> input;
         switch(input)
         {   

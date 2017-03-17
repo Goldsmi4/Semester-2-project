@@ -3,10 +3,23 @@
 #include<time.h>
 #include<stdio.h>
 #include<ctime>
-#include "storyIndoors.h"
+#include"storyCar.h"
+#include"storyIndoors.h"
+
+
 using namespace std;
 
-void gameBegins();
+void callNpcAttack();
+void levelUp();
+void offer();
+void playerStatus();
+void runAway();
+void leave();
+void panic();
+void home();
+
+
+int gameBegins()
 
 int playerLife = 120;    
 int enemyLife = 100;
