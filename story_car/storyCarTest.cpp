@@ -27,7 +27,7 @@ int main()
 
 
 
-int evacAttackZombie()          //last function where the player has to defeat a small group of zombies
+void evacAttackZombie()          //last function where the player has to defeat a small group of zombies
 {                               //before he can enter the safe zone and win.
     
     
@@ -42,7 +42,7 @@ int evacAttackZombie()          //last function where the player has to defeat a
 }
         
 
-int evacRoofAttention()
+void evacRoofAttention()
 {
     int input;
     {
@@ -85,7 +85,7 @@ int evacRoofAttention()
 
 
 
-int evacRoof()
+void evacRoof()
 {
     int input;
     {
@@ -122,7 +122,7 @@ int evacRoof()
 }
 
 
-int evacGateDash()
+void evacGateDash()
 {
     int input;
     {
@@ -157,7 +157,7 @@ int evacGateDash()
 }
 
 
-int evacInvest()
+void evacInvest()
 {
     int input;
     {
@@ -196,7 +196,7 @@ int evacInvest()
 
 
 
-int evacDistract()
+void evacDistract()
 {
     int input;
     {
@@ -232,7 +232,7 @@ int evacDistract()
 }
 
 
-int evacPointHorde()
+void evacPointHorde()
 {
     int input;
     {
@@ -275,7 +275,7 @@ int evacPointHorde()
 }
 
 
-int apartmentChoice()
+void apartmentChoice()
 {
     int input;
     {
@@ -317,7 +317,7 @@ int apartmentChoice()
 }
 
 
-int apartmentLoot()
+void apartmentLoot()
 {
     int input;
     {
@@ -351,7 +351,7 @@ int apartmentLoot()
 
 
 
-int ringroadShop()
+void ringroadShop()
 {                               
     int input;
     {
@@ -388,7 +388,7 @@ int ringroadShop()
 }
 
 
-int apartmentSurvivor()
+void apartmentSurvivor()
 {
     int input;
     {
@@ -430,7 +430,7 @@ int apartmentSurvivor()
 
 
 
-int apartmentSearch()
+void apartmentSearch()
 {
     int input;
     {
@@ -464,7 +464,7 @@ int apartmentSearch()
 }
 
 
-int gunshopEscape()
+void gunshopEscape()
 {
     int input;
     {
@@ -507,7 +507,7 @@ int gunshopEscape()
 }
 
 
-int managerLock()
+void managerLock()
 {
     int input;
     {
@@ -539,7 +539,7 @@ int managerLock()
 
 
 
-int lootRifle()
+void lootRifle()
 {
         int input;
         {
@@ -578,7 +578,7 @@ int lootRifle()
     }}}
 
        
-int lootGunshop()
+void lootGunshop()
     {
         int input;
         {
@@ -660,7 +660,7 @@ void route_path()
         
         
 
-    int killLooter()
+void killLooter()
     {   
         int input;
         {
@@ -695,7 +695,7 @@ void route_path()
         
         
         
-int neighbourCar()
+void neighbourCar()
     {
         int input;
         {
