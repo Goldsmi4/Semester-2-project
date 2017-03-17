@@ -37,17 +37,124 @@ int main()
 
 
 
+int evacRoof()
+{
+    int input;
+    {
+        retry_evacRoof:
+        cout << "" << endl;
+        cout << "" << endl;
+        cout << "" << endl;
+    }
+}
+
+
+int evacGateDash()
+{
+    int input;
+    {
+        retry_evacGateDash:
+        cout << "" << endl;
+        cout << "Do you go now?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Yes its now or never" << endl;
+        cout << "/t 2: No wait for them to move from the gate" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You move towards the gate and attack the zombies in your way." << endl;
+                // attack the zombies function here
+                break;
+            case 2:
+                cout << "You wait even longer for them to move but the noise behind you turns out to be a" << endl
+                << "small group of zombies. However they seem different. They see you and run towards you" << endl
+                << "You turn around and attack them but you get overrun and mauled. You are dead." << endl
+                << "" << endl
+                << "Game over" << endl;
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_evacGateDash;
+                
+        }
+    }
+}
+
+
+int evacInvest()
+{
+    int input;
+    {
+        retry_evacInvest:
+        cout << "You see an apartment with external roof access and an abandoned military vehicle." << endl;
+        cout << "What do you go to?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Apartment roof to scout area" << endl;
+        cout << "/t 2: Military vehicle" << endl;
+        cout << "" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1:
+                cout << "You head over to the apartment and climb up to the roof." << endl;
+                evacRoof();
+                break;
+                
+            case 2:
+                cout << "You walk over to the vehicle to try and find anything useful" << endl
+                << "Looking inside it there is little to salvage but youdo find a flare." << endl
+                << "You then head to the roof" << endl;
+                // add flare to inventory
+                evacRoof();
+                break;
+                
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_evacInvest;
+        }
+        
+                
+
+    }
+}
 
 
 
-
-
-
-
-
-
-
-
+int evacDistract()
+{
+    int input;
+    {
+        retry_evacDistract:
+        cout << "You throw them one by one towards the group of abandoned cars to your ledt away from" << endl;
+        cout << "the main gate, they start burning and one of the cars explodes. The horde starts stumbling" << endl;
+        cout << "over to the cars. do you go for the gate now?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Yes" << endl;
+        cout << "/t 2: No, wait a minute" << endl;
+        cout << "" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1: 
+                cout << "You Start to run over to the main gate but a large group sees you and walk towards you" << endl
+                << "You continue to the main gate, get there and start opening it. before the metal beam securing the" << endl
+                << "door is removed the large zombie group catches up with you and mauls you to death."<< endl
+                << "" << endl
+                << "Game over" << endl;
+                break;
+            
+            case 2:
+                cout << "You wait. The horde continues to the cars, a two zombies remain between you and the gate." << endl
+                << "You hear lots of movement around the corner behind you." << endl;
+                evacGateDash();
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_evacDistract;
+        }
+    }
+}
 
 
 int evacPointHorde()
@@ -56,8 +163,37 @@ int evacPointHorde()
     {
         retry_evacPointHorde:
         cout << "You have reached the evacuation site, it is surrounded by high fences" << endl; 
-        cout << "and a horde of zombies." << endl;
-        
+        cout << "and a horde of zombies. How do you want to get in?" << endl;
+        cout << "" << endl;
+        cout << "/t 1: Look around first to try and find an easier way in" << endl;
+        cout << "/t 2: Make a distraction and run for the main gate" << endl;
+        cout << "/t 3: Use a car to ram the gate to get in" << endl;
+        cin >> input;
+        switch(input)
+        {
+            case 1: 
+                cout << "You look around the area." << endl;
+                evacInvest();
+                break;
+            case 2:
+                cout << "You go to a nearby shop and take some glass bottles. Using these, some cloth rags and fuel from" << endl
+                << "an abandoned car, you make 5 molotovs." << endl;
+                evacDistract();
+                break;
+            case 3: 
+                cout << "You go over to a group of cars to see if any are working. The third one you try" << endl
+                << "has keys in the ignition and works. You drive it onto the main road leading to the main gate" << endl
+                << "to get a run up to the gate. You wait For a gap in the zombie horde and accelerate. You " << endl
+                << "reach the horde and plow into it, reaching the gate. the gate is locked with a heavy " << endl
+                << "metal beam and the hinges dont break. The gate remains closed. You are now trapped in the middle of" << endl
+                << "the zombie horde with no wayto escape. You are dead" << endl
+                << "" << endl
+                << "Game over" << endl;
+                break;
+            default:
+                cout << "Thats not an option, please choose one given" << endl;
+                goto retry_evacPointHorde;
+        }
     
     }
 }
@@ -133,12 +269,12 @@ int apartmentLoot()
                 cout << "Thats not an option, please choose one given" << endl;
                 goto retry_apartmentLoot;
     }
-}
+}}
 
 
 
 int ringroadShop()
-{                               // error here????????
+{                               
     int input;
     {
     retry_ringroadShop:
@@ -344,12 +480,14 @@ int lootRifle()
             
         case 2:
             cout << "You look around the room, in the drawers of the desk, on the shelves and the cupboards." << endl
-            << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl;
+            << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl
+            << "However, the zombie group has surrounded your car so you carry on on foot." << endl;
             apartmentSearch();
             break;
         case 3:
             cout << "You look around the room, in the drawers of the desk, on the shelves and the cupboards." << endl
-            << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl;
+            << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl
+            << "However, the zombie group has surrounded your car so you carry on on foot." << endl;
             apartmentSearch();
             break;
         default:
@@ -557,6 +695,4 @@ void car(){
         default:
                 cout << "Thats not an option, please choose one given" << endl;
                 goto retry_car;
-        }
-        }
-    }               // error here????????
+        }}}               
