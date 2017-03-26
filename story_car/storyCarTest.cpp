@@ -27,13 +27,13 @@ int main()
 
 
 
-void evacAttackZombie()          //last function where the player has to defeat a small group of zombies
+int evacAttackZombie()          //last function where the player has to defeat a small group of zombies
 {                               //before he can enter the safe zone and win.
-                                    
     
-                                // Check inventory for weapons, if there are no weapons player dies. melee weapons lead to player injury and
-                                // then checks player inventory for medical stuff. if there is none then they die. if player has ranged weapon 
-    {                           // they get in with no injuries (unless if pistol then they get minor injuries)
+    
+    
+    
+    {
         
         
         
@@ -42,7 +42,7 @@ void evacAttackZombie()          //last function where the player has to defeat 
 }
         
 
-void evacRoofAttention()
+int evacRoofAttention()
 {
     int input;
     {
@@ -85,7 +85,7 @@ void evacRoofAttention()
 
 
 
-void evacRoof()
+int evacRoof()
 {
     int input;
     {
@@ -105,6 +105,7 @@ void evacRoof()
                 << "to the bus. When you are there you wait for an opportunity to run over. After some time the zombies" << endl
                 << "disperse leaving three of them between you and the bus. More are wondering towards the bus so you make" << endl
                 << "your move." << endl;
+                //insert fight function here ;
                 evacAttackZombie();
                 break;
                 
@@ -121,7 +122,7 @@ void evacRoof()
 }
 
 
-void evacGateDash()
+int evacGateDash()
 {
     int input;
     {
@@ -137,6 +138,7 @@ void evacGateDash()
         {
             case 1:
                 cout << "You move towards the gate and attack the zombies in your way." << endl;
+                // attack the zombies function here
                 evacAttackZombie();
                 break;
             case 2:
@@ -155,7 +157,7 @@ void evacGateDash()
 }
 
 
-void evacInvest()
+int evacInvest()
 {
     int input;
     {
@@ -176,7 +178,7 @@ void evacInvest()
                 
             case 2:
                 cout << "You walk over to the vehicle to try and find anything useful" << endl
-                << "Looking inside it there is little to salvage but youdo find a flare." << endl // items <---------------------------------------------------------
+                << "Looking inside it there is little to salvage but youdo find a flare." << endl
                 << "You then head to the roof and climb up." << endl;
                 // add flare to inventory
                 evacRoof();
@@ -194,12 +196,12 @@ void evacInvest()
 
 
 
-void evacDistract()
+int evacDistract()
 {
     int input;
     {
         retry_evacDistract:
-        cout << "You throw them one by one towards the group of abandoned cars to your left away from" << endl;
+        cout << "You throw them one by one towards the group of abandoned cars to your ledt away from" << endl;
         cout << "the main gate, they start burning and one of the cars explodes. The horde starts stumbling" << endl;
         cout << "over to the cars. do you go for the gate now?" << endl;
         cout << "" << endl;
@@ -218,7 +220,7 @@ void evacDistract()
                 break;
             
             case 2:
-                cout << "You wait. The horde continues to the cars, two zombies remain between you and the gate." << endl
+                cout << "You wait. The horde continues to the cars, a two zombies remain between you and the gate." << endl
                 << "You hear lots of movement around the corner behind you." << endl;
                 evacGateDash();
                 break;
@@ -230,7 +232,7 @@ void evacDistract()
 }
 
 
-void evacPointHorde()
+int evacPointHorde()
 {
     int input;
     {
@@ -273,7 +275,7 @@ void evacPointHorde()
 }
 
 
-void apartmentChoice()
+int apartmentChoice()
 {
     int input;
     {
@@ -315,7 +317,7 @@ void apartmentChoice()
 }
 
 
-void apartmentLoot()
+int apartmentLoot()
 {
     int input;
     {
@@ -349,7 +351,7 @@ void apartmentLoot()
 
 
 
-void ringroadShop()
+int ringroadShop()
 {                               
     int input;
     {
@@ -366,7 +368,7 @@ void ringroadShop()
         case 1:
             cout << "You move over to the window and peek in." << endl
             << "" << endl
-            << "You enter the shop and look around. you find some food and medical supplies." << endl           // items <--------------------------------------------------------------------------------
+            << "You enter the shop and look around. you find some food and medical supplies." << endl
             << "You dont find anything else so you leave and carry on to the evacuation point." <<endl;
             
             apartmentLoot();
@@ -386,7 +388,7 @@ void ringroadShop()
 }
 
 
-void apartmentSurvivor()
+int apartmentSurvivor()
 {
     int input;
     {
@@ -411,7 +413,7 @@ void apartmentSurvivor()
                 
                 break;
             case 2:
-                cout << "You rummage around the room and find his pistol amongst a pile of bloody clothes" << endl      // items <------------------------------------------------------------------------
+                cout << "You rummage around the room and find his pistol amongst a pile of bloody clothes" << endl
                 << "you take aim at his head and just as you are about toshoot he says:" << endl
                 << "Please.... let me do it." << endl
                 << "you nod and hand him the pistol. You leave the building before he shoots and" << endl
@@ -428,7 +430,7 @@ void apartmentSurvivor()
 
 
 
-void apartmentSearch()
+int apartmentSearch()
 {
     int input;
     {
@@ -462,7 +464,7 @@ void apartmentSearch()
 }
 
 
-void gunshopEscape()
+int gunshopEscape()
 {
     int input;
     {
@@ -505,7 +507,7 @@ void gunshopEscape()
 }
 
 
-void managerLock()
+int managerLock()
 {
     int input;
     {
@@ -524,7 +526,7 @@ void managerLock()
             apartmentSearch();
             break;
         case 2:
-            cout << "You try a couple more and eventually one works. You take the rifle and a few mags of ammunition and sling" << endl                     // lose and add items here <---------------------------------------------------------------------------------------------------
+            cout << "You try a couple more and eventually one works. You take the rifle and a few mags of ammunition and sling" << endl
             << "the gun over your shoulder. However, the zombie group is meters from the shop door, effectively trapping you in the shop." << endl;
             gunshopEscape();
             break;
@@ -537,7 +539,7 @@ void managerLock()
 
 
 
-void lootRifle()
+int lootRifle()
 {
         int input;
         {
@@ -553,7 +555,7 @@ void lootRifle()
     switch(input)
     {
         case 1:
-            cout << "You go into the manager's office and look around. you see lots of keys" << endl            // item <-------------------------------------------------------------------------------------
+            cout << "You go into the manager's office and look around. you see lots of keys" << endl
             << "in one of his drawers. you take them and try them on the padlock" << endl;
             managerLock();
             break;
@@ -576,7 +578,7 @@ void lootRifle()
     }}}
 
        
-void lootGunshop()
+int lootGunshop()
     {
         int input;
         {
@@ -658,7 +660,7 @@ void route_path()
         
         
 
-void killLooter()
+    int killLooter()
     {   
         int input;
         {
@@ -673,8 +675,8 @@ void killLooter()
         {
             case 1:
                 cout << "You sneak up behind him and kill them. You loot him and get his pistol" << endl
-                << "along with a tin of food. You rummage around the house and find some old" << endl         // possibly change this bit to use Will's search house code 
-                << "tshirts you can use as rags and some magazines you could use as bite protection" << endl    // also item here <---------------------------------------------------------------------------------------------------------
+                << "along with a tin of food. You rummage around the house and find some old" << endl         // possibly change this bit to use Will's search house code
+                << "tshirts you can use as rags and some magazines you could use as bite protection" << endl
                 << "on your arms. After looting the house you leave and go back to your car." << endl;
                 route_path();
                 break;
@@ -693,7 +695,7 @@ void killLooter()
         
         
         
-void neighbourCar()
+int neighbourCar()
     {
         int input;
         {
@@ -756,7 +758,7 @@ void car(){
             case 1:    
                     cout << "You go into the garage and look around and see fuel cans, a knife and some duck tape." << endl
                     << "You pick these items up and go back to the car." << endl
-                    << "There isn't much fuel in the fuel cans but you pour what is there into the tank and " << endl                       // item here <------------------------------------------------------------------------------
+                    << "There isn't much fuel in the fuel cans but you pour what is there into the tank and " << endl
                     << "and put the empty cans into the boot." << endl
                     << "You get back into the car and see the tank is now 1/3 full." << endl
                     << " you start driving" << endl;

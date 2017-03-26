@@ -5,13 +5,14 @@ using namespace std;
 
 bool answer()
 {
-    cout<< "enter at own discretion...(y/n): "<<endl ;
+    cout<< "Enter at own discretion...(y/n): ";
     
     string entry = "";
     bool valid_entry = false;
     
     while (!valid_entry) {
         cin >> entry;
+        cout << endl;
         
         if (entry =="yes" or entry == "Yes" or entry == "y" or entry == "Y") {
             valid_entry= true;
@@ -21,7 +22,7 @@ bool answer()
             valid_entry = true;
             return false;    
         }else{
-            cout << "invalid input! please try again " << endl;
+            cout << "Invalid input! Please try again " << endl;
             
         }
     }

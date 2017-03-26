@@ -31,12 +31,12 @@ int npc_attack() {
     // add randomiser to check who gets the first move
    
     while (npcHealth && health >0){
-        cout << " select your attack -" << endl;
+        cout << "- select your attack -" << endl;
         
-        cout << "/t 1: punch enemy" << endl;
-        cout << "/t 2: use equipted weapon " << endl;
-        cout << "/t 3: run and take cover " << endl;
-        cout << "/t 4: block and counter attack" << endl;
+        cout << "/t 1: Punch enemy" << endl;
+        cout << "/t 2: Use equipted weapon " << endl;
+        cout << "/t 3: Run and take cover " << endl;
+        cout << "/t 4: Block and counter attack" << endl;
         
         //if possible add weapon selected from database 
         //this way the weapon will be automatically
@@ -85,7 +85,7 @@ int npc_attack() {
                 break;
                 
             default:
-                cout << "invalid input, try again" << endl;  
+                cout << "Invalid input, try again" << endl;  
                 
         }
         npcdamage = (attack-kick)-(npcDefence/attack);
@@ -97,18 +97,18 @@ int npc_attack() {
         
         npcHealth = npcHealth - npcDamage;
         
-        cout << "your attach has reduced the zombies health by "<< npcDamage << "!\n";
+        cout << "Your attach has reduced the zombies health by "<< npcDamage << "!\n";
         cin.get();
         
         if(npcHealth < 1) {
-            cout << " you have killed the zombie! \n";
+            cout << " You have killed the zombie! \n";
             cin.get();
             return 0;
             
         }
         
         
-        cout << "the zombie still has" << npcHealth << "health left.\n";
+        cout << "The zombie still has" << npcHealth << "health left.\n";
         damage= (npcAttack-agility) - (defence/npcAttack);
         
         if (damage <0) {
@@ -119,7 +119,7 @@ int npc_attack() {
         
         health=health - damage;
         
-        cout << "you have lost " << damage << "health, you still have " << health << "health left\n";
+        cout << "You have lost " << damage << "health, you still have " << health << "health left\n";
         
         
         if (health < 1){

@@ -2,44 +2,46 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
+#include "../mysql_functions.h"
+
+#define RESET   "\033[0m"
+#define BLACK   "\033[30m"      /* Black */
+#define RED     "\033[31m"      /* Red */
+#define GREEN   "\033[32m"      /* Green */
+#define YELLOW  "\033[33m"      /* Yellow */
+#define BLUE    "\033[34m"      /* Blue */
+#define MAGENTA "\033[35m"      /* Magenta */
+#define CYAN    "\033[36m"      /* Cyan */
+#define WHITE   "\033[37m"      /* White */
+#define BOLDBLACK   "\033[1m\033[30m"      /* Bold Black */
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
+#define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
+#define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
+#define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
 
 using namespace std;
+
+void status();
+void load_stealth(string user_name);
 void car();
 
     
 int car_run()
 {
-    cout<<"==========================="<<endl;
+    cout<<""<<endl;
     car();
     return(0);
 }
-
-//void evacRoof()
-//{
-//    int input;
-//    {
-//        retry_evacRoof:
-//        cout << "" << endl;
-//        cout << "" << endl;
-//        cout << "" << endl;
-//    }
-//}
-
-
 
 
 
 int evacAttackZombie()          //last function where the player has to defeat a small group of zombies
 {                               //before he can enter the safe zone and win.
-    
-    
-    
-    
     {
-        
-        
-        
-        
+//finish line  
     }
 }
         
@@ -49,24 +51,44 @@ int evacRoofAttention()
     int input;
     {
         retry_evacRoofAttention:
+
         cout << "Do you try and get their attention by yelling?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Yes, they can help me" << endl;
-        cout << "/t 2: No, Lets take a closer look" << endl;
+        cout << YELLOW << "\t >> 1: Yes, they can help me" << endl;
+        cout << "\t >> 2: No, Lets take a closer look" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You wave your arms and yell to get their attention. They dont respond. You hear lots of" << endl
                 << "stumbling a floor below you and suddenly the internal roof access door flies open. You are rushed" << endl
                 << "by a large group of zombies. You are in no position to fight them so you turn and run for the external"
                 << "roof access ladder but trip on one of the cables running across the roof. They grab you. You are dead" << endl
-                << "" << endl
-                << "Game over" << endl;
+                << "" << endl;
+                
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;    
                 break;
                 
             case 2:
+                cout << string( 100, '\n' );
+                cout << string( 100, '\n' );
                 cout << "You look closer at the people in the evacuation point and see they are zombies." << endl
                 << "after looking around for a while, the bus seems to be the safest way into the site." << endl
                 << "You climb down from the apartment roof and make your way quietly to the nearest building" << endl
@@ -91,18 +113,22 @@ int evacRoof()
 {
     int input;
     {
-        retry_evacRoof:
+       
         cout << "Once on the roof you look around the evacuation point fro any ways in. You see a bus that has" << endl;
         cout << "rammed the fence but didnt make it through. Its roof is high enough for you to use it to climb" << endl;
-        cout << "over the fence. Do you try this?" << endl;
+        cout << "over the fence.." << endl;
         cout << "" << endl;
-        cout << "/t 1: Yes, looks like the best option" << endl;
-        cout << "/t 2: No, look for another safer way in" << endl;
-        cout << "" << endl;
+        cout << YELLOW << "\t >> 1: Yes, looks like the best option" << endl;
+        cout << "\t >> 2: No, look for another safer way in" << RESET << endl;
+        cout << "" << endl; 
+        
+        retry_evacRoof:
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You climb down from the apartment roof and make your way quietly to the nearest building" << endl
                 << "to the bus. When you are there you wait for an opportunity to run over. After some time the zombies" << endl
                 << "disperse leaving three of them between you and the bus. More are wondering towards the bus so you make" << endl
@@ -112,6 +138,7 @@ int evacRoof()
                 break;
                 
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You continue to look around and eventually see people in the evacuation point wondering around" << endl;
                 evacRoofAttention();
                 break;
@@ -129,26 +156,44 @@ int evacGateDash()
     int input;
     {
         retry_evacGateDash:
-        cout << "" << endl;
         cout << "Do you go now?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Yes its now or never" << endl;
-        cout << "/t 2: No wait for them to move from the gate" << endl;
+        cout << YELLOW << "\t 1: Yes its now or never" << endl;
+        cout << "\t 2: No wait for them to move from the gate" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You move towards the gate and attack the zombies in your way." << endl;
                 // attack the zombies function here
                 evacAttackZombie();
                 break;
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You wait even longer for them to move but the noise behind you turns out to be a" << endl
                 << "small group of zombies. However they seem different. They see you and run towards you" << endl
                 << "You turn around and attack them but you get overrun and mauled. You are dead." << endl
-                << "" << endl
-                << "Game over" << endl;
+                << "" << endl;
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;    
+                break;
+                
                 break;
             default:
                 cout << "Thats not an option, please choose one given" << endl;
@@ -167,18 +212,21 @@ int evacInvest()
         cout << "You see an apartment with external roof access and an abandoned military vehicle." << endl;
         cout << "What do you go to?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Apartment roof to scout area" << endl;
-        cout << "/t 2: Military vehicle" << endl;
+       cout << YELLOW << "\t 1: Apartment roof to scout area" << endl;
+        cout << "\t 2: Military vehicle" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You head over to the apartment and climb up to the roof." << endl;
                 evacRoof();
                 break;
                 
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You walk over to the vehicle to try and find anything useful" << endl
                 << "Looking inside it there is little to salvage but youdo find a flare." << endl
                 << "You then head to the roof and climb up." << endl;
@@ -207,9 +255,10 @@ int evacDistract()
         cout << "the main gate, they start burning and one of the cars explodes. The horde starts stumbling" << endl;
         cout << "over to the cars. do you go for the gate now?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Yes" << endl;
-        cout << "/t 2: No, wait a minute" << endl;
+        cout << YELLOW << "\t 1: Yes" << endl;
+        cout << "\t 2: No, wait a minute" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
@@ -217,11 +266,26 @@ int evacDistract()
                 cout << "You Start to run over to the main gate but a large group sees you and walk towards you" << endl
                 << "You continue to the main gate, get there and start opening it. before the metal beam securing the" << endl
                 << "door is removed the large zombie group catches up with you and mauls you to death."<< endl
-                << "" << endl
-                << "Game over" << endl;
+                << "" << endl;
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;     
                 break;
             
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You wait. The horde continues to the cars, a two zombies remain between you and the gate." << endl
                 << "You hear lots of movement around the corner behind you." << endl;
                 evacGateDash();
@@ -242,31 +306,49 @@ int evacPointHorde()
         cout << "You have reached the evacuation site, it is surrounded by high fences" << endl; 
         cout << "and a horde of zombies. How do you want to get in?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Look around first to try and find an easier way in" << endl;
-        cout << "/t 2: Make a distraction and run for the main gate" << endl;
-        cout << "/t 3: Use a car to ram the gate to get in" << endl;
+        cout << YELLOW << "\t 1: Look around first to try and find an easier way in" << endl;
+        cout << "\t 2: Make a distraction and run for the main gate" << endl;
+        cout << "\t 3: Use a car to ram the gate to get in" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1: 
+                cout << string( 100, '\n' );
                 cout << "You look around the area." << endl;
                 evacInvest();
                 break;
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You go to a nearby shop and take some glass bottles. Using these, some cloth rags and fuel from" << endl
                 << "an abandoned car, you make 5 molotovs." << endl;
                 evacDistract();
                 break;
             case 3: 
+                cout << string( 100, '\n' );
                 cout << "You go over to a group of cars to see if any are working. The third one you try" << endl
                 << "has keys in the ignition and works. You drive it onto the main road leading to the main gate" << endl
                 << "to get a run up to the gate. You wait For a gap in the zombie horde and accelerate. You " << endl
                 << "reach the horde and plow into it, reaching the gate. the gate is locked with a heavy " << endl
                 << "metal beam and the hinges dont break. The gate remains closed. You are now trapped in the middle of" << endl
                 << "the zombie horde with no wayto escape. You are dead" << endl
-                << "" << endl
-                << "Game over" << endl;
+                << "" << endl;
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;     
                 break;
             default:
                 cout << "Thats not an option, please choose one given" << endl;
@@ -285,23 +367,40 @@ int apartmentChoice()
         cout << "" << endl;
         cout << "Do you go in to help?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Yes they need my help" << endl;
-        cout << "/t 2: No too risky" << endl;
+        cout << YELLOW << "\t 1: Yes they need my help" << endl;
+        cout << "\t 2: No too risky" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You move forward quickly to find the room they are in. The zombie group is approaching you." << endl
                 << "You find the room and dash inside and close the door behind you. As you get into the room one" << endl
                 << "of the zombies you thought was dead on the floor grabs yoour leg and bites it. The people in the" << endl
                 << "see this. As you finish barricading the door, one of the survivors grabs a pistol and shoots you." << endl
                 << "Then he proceeds to takes your things as your vision fades to black." << endl
-                << "" << endl
-                << "Game over" << endl;
+                << "" << endl;
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+ cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+ cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+ cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+ cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+ cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+ cout << RED << "                                                                                       " << endl;
+ cout << RED << "                                                                                       " << endl;
+ cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+ cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+ cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+ cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+ cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+ cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+ cout << RESET;     
                 break;
                 
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You quickly leave the way you came in and barricade the door behind you and continue" << endl
                 << "to the evacuation area" << endl;
                 evacPointHorde();
@@ -327,13 +426,15 @@ int apartmentLoot()
         cout << "On your way to the evacuation point you see an apartment and hear people screaming for help" << endl;
         cout << "from inside. Do you go inside to help." << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Yes." << endl;
-        cout << "/t 2: No, carry on to the exacuation point." << endl;
+        cout << YELLOW << "\t 1: Yes." << endl;
+        cout << "\t 2: No, carry on to the exacuation point." << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You head over cautiously, look through the main door" << endl
                 << "and see many dead zombies in the main corridor. All the doors in the corridor" <<endl
                 << "are open and the floor is soaked with blood. You move to it to investigate." << endl
@@ -342,6 +443,7 @@ int apartmentLoot()
                 apartmentChoice();
                 break;
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You continue on to the evacuation point" << endl;
                 evacPointHorde();
                 break;
@@ -361,13 +463,15 @@ int ringroadShop()
     cout << "You climb over the barricade and get off the overpass. By the exit you see a shop." << endl;
     cout << "Do you loot it?" << endl;
     cout << "\n" << endl;
-    cout << "/t 1: Yes" << endl;
-    cout << "/t 2: no, i need to get out of here" << endl;
+    cout << YELLOW << "\t 1: Yes" << endl;
+    cout << "\t 2: no, i need to get out of here" << RESET << endl;
     cout << "" << endl;
+        cout << "Enter your choice: ";
     cin >> input;
     switch (input)
     {    
         case 1:
+            cout << string( 100, '\n' );
             cout << "You move over to the window and peek in." << endl
             << "" << endl
             << "You enter the shop and look around. you find some food and medical supplies." << endl
@@ -378,6 +482,7 @@ int ringroadShop()
             break;
             
         case 2:
+            cout << string( 100, '\n' );
             cout << "you continue walking down the ringroad towards the evacuation point." << endl;
             
             apartmentLoot();
@@ -401,13 +506,15 @@ int apartmentSurvivor()
         cout << "was responsible for the carnage in the hallway. You approach him to help," << endl;
         cout << "how should you?" << endl;
         cout << "" << endl;
-        cout << "/t 1: Treat his wound the best you can and move him to the bed" << endl;
-        cout << "/t 2: Look for his weapon and end it quickly for him" << endl;
+        cout << YELLOW << "\t 1: Treat his wound the best you can and move him to the bed" << endl;
+        cout << "\t 2: Look for his weapon and end it quickly for him" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You use some tshirts you find in a drawer to bandage up his wounds" << endl
                 << "and give him some painkillers found in the bathroom to numb his pain." << endl
                 << "you leave him some food and his pistol. You leave the building and walk to" << endl
@@ -415,6 +522,7 @@ int apartmentSurvivor()
                 
                 break;
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You rummage around the room and find his pistol amongst a pile of bloody clothes" << endl
                 << "you take aim at his head and just as you are about toshoot he says:" << endl
                 << "Please.... let me do it." << endl
@@ -440,19 +548,22 @@ int apartmentSearch()
         cout << "On your way to the evacuation point you see an apartment and hear a person screaming for help." << endl;
         cout << "from inside. Do you go inside to help." << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Yes" << endl;
-        cout << "/t 2: No, carry on to the exacuation point" << endl;
+        cout << YELLOW << "\t 1: Yes" << endl;
+        cout << "\t 2: No, carry on to the exacuation point" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You head over cautiously, look through the main door" << endl
                 << "and see many dead zombies in the main corridor. One of the doors" <<endl
                 << "into an apartment is open. you move to it to investigate." << endl;
                 apartmentSurvivor();
                 break;
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You continue on to the evacuation point" << endl;
                 evacPointHorde();
                 break;
@@ -476,21 +587,39 @@ int gunshopEscape()
         cout << "The Glass window on the door smashes as the zombies try to force their way in." << endl;
         cout << "You also hear alot of movement upstairs. These are your options." << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Investigate upstairs cautiously" << endl;
-        cout << "/t 2: Look for an escape route" << endl;
+       cout << YELLOW << "\t 1: Investigate upstairs cautiously" << endl;
+        cout << "\t 2: Look for an escape route" << RESET << endl;
         cout << "" << endl;
+        cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "On the landing there are three zombies. As you back up down the stairs the steps creek." << endl
                 << "This causes them to rush you. you shoot two of them but the third tackles you and bites you" << endl
-                << "on the neck. You are dead." <<endl
-                << "\n Game over" << endl;
-            
+                << "on the neck. You are dead." <<endl;
+                             cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;     
+                
+                
                 break;
             
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You dash over to the manager's office and see a window. You shoot it, climb out" << endl
                 << "and run down the street." << endl;
                 apartmentSearch();
@@ -517,17 +646,20 @@ int managerLock()
     cout << "You try several keys in the lock but none of them work. You have many more to try" << endl;
     cout << "but you hear the zombie group approaching. What do you do?" << endl;
     cout << "\n" << endl;
-    cout << "/t 1: Leave, dont want to be stuck in here with them." << endl;
-    cout << "/t 2: I have time to try a few more." << endl;
+    cout << YELLOW << "\t 1: Leave, dont want to be stuck in here with them." << endl;
+    cout << "\t 2: I have time to try a few more." << RESET << endl;
     cout << "" << endl;
+        cout << "Enter your choice: ";
     cin >> input;
     switch(input)
     {
         case 1:
+            cout << string( 100, '\n' );
             cout << "You drop the keys you found and run to your car. You get in and drive off towards the evacuation point." << endl;
             apartmentSearch();
             break;
         case 2:
+            cout << string( 100, '\n' );
             cout << "You try a couple more and eventually one works. You take the rifle and a few mags of ammunition and sling" << endl
             << "the gun over your shoulder. However, the zombie group is meters from the shop door, effectively trapping you in the shop." << endl;
             gunshopEscape();
@@ -549,26 +681,30 @@ int lootRifle()
     cout << "The rifle was locked to its mount with a padlock. Knowing that the group of zombies is following you have a limited amount of time." <<endl;
     cout << "Which room do you search for the key?" << endl;
     cout << "\n" << endl;
-    cout << "/t 1: Manager's office" << endl;
-    cout << "/t 2: Accounting office" << endl;
-    cout << "/t 3: storage" << endl;
+   cout << YELLOW << "\t 1: Manager's office" << endl;
+    cout << "\t 2: Accounting office" << endl;
+    cout << "\t 3: Storage" << RESET << endl;
     cout << "" << endl;
+            cout << "Enter your choice: ";
     cin >> input;
     switch(input)
     {
         case 1:
+            cout << string( 100, '\n' );
             cout << "You go into the manager's office and look around. you see lots of keys" << endl
             << "in one of his drawers. you take them and try them on the padlock" << endl;
             managerLock();
             break;
             
         case 2:
+            cout << string( 100, '\n' );
             cout << "You look around the room, in the drawers of the desk, on the shelves and the cupboards." << endl
             << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl
             << "However, the zombie group has surrounded your car so you carry on on foot." << endl;
             apartmentSearch();
             break;
         case 3:
+            cout << string( 100, '\n' );
             cout << "You look around the room, in the drawers of the desk, on the shelves and the cupboards." << endl
             << "Nothing. You hear the zombie group approaching. You leave before you get trapped in the shop." << endl
             << "However, the zombie group has surrounded your car so you carry on on foot." << endl;
@@ -588,19 +724,22 @@ int lootGunshop()
     cout << "You reach the shop with no problems but you have attracted a group of zombies a few hundred meters behind you." << endl;
     cout << "The shop looks clear but you dont have long. do you loot the gunshop?" << endl;
     cout << "\n" << endl;
-    cout << "/t 1: yes" <<endl;
-    cout << "/t 2: no, they are too close." << endl;
+    cout << YELLOW << "\t 1: Yes" <<endl;
+    cout << "\t 2: No, they are too close." << RESET << endl;
     cout << "" << endl;
+            cout << "Enter your choice: ";
     cin >> input;
     switch(input)
     {
         case 1:
+            cout << string( 100, '\n' );
             cout << "Knowing you dont have long you move quickly over to and into the shop. You close the door behind you and lock it." << endl;
             cout << "A quick look around and see some weapons secured to the wall. One of the rifles seems to be loosely secured" << endl;
             
             lootRifle();
             break;
         case 2:
+            cout << string( 100, '\n' );
             cout << " you get back into the car and continue driving to the extraction point." << endl;
             apartmentSearch();
             break;
@@ -617,16 +756,17 @@ void route_path()
         retry_route_path:
         cout << "You reach the edge of the neighbourhood, which route do you want to take?" << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Take the ring road and travel around to the evacuation point. It could be safer but you are less likley to find anything" << endl;
-        cout << "/t 2: Travel straight to the evacuation point. This will take you through residential areas but there is more chance to find things" << endl;
-        cout << "/t 3: Go to the evacuation point via the gunshop downtown. There could be weapons there" << endl;
+       cout << YELLOW << "\t 1: Take the ring road and travel around to the evacuation point. It could be safer but you are less likley to find anything" << endl;
+        cout << "\t 2: Travel straight to the evacuation point. This will take you through residential areas but there is more chance to find things" << endl;
+        cout << "\t 3: Go to the evacuation point via the gunshop downtown. There could be weapons there" << RESET << endl;
         cout << "" << endl;
+            cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {    
             case 1:
     
-    
+               cout << string( 100, '\n' );
                 cout << "You travel along the ringroad towards the evacuation point, whilst on the overpass you see a roadblock up ahead." << endl
                 << "You stop the car and get out well short of the roadblock. you are close to the evacuation point" << endl
                 << "and there are no other routes to take. So you approach the roadblock carefully. There seems to be noone there." <<endl;
@@ -637,15 +777,33 @@ void route_path()
 
             case 2:
     
-    
+                cout << string( 100, '\n' );
                 cout << "You travel down the main road that leads to the evacuation point. You turn around a sharp" << endl
                 << "corner and see the road is blocked and theres people sitting on the blockade. Before you" << endl
-                << "Can do anything hey shoot the windscreen and hit you in the chest. You are dead." << endl
-                << "/n game over please start again" << endl;
+                << "Can do anything hey shoot the windscreen and hit you in the chest. You are dead." << endl;
+                
+                 
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;     
+                
                 
                 break;
     
             case 3:
+                cout << string( 100, '\n' );
                 cout << "you Drive down the road that leads to the gunshop." << endl;
                 
                 lootGunshop();
@@ -669,13 +827,15 @@ void route_path()
         retry_killLooter:
         cout << "He doesnt notice you but he is armed with a pistol. Do you quietly kill him?" << endl;
         cout << "\n" <<endl;
-        cout << "/t 1: Yes" << endl;
-        cout << "/t 2: No and leave" << endl;
+        cout << YELLOW << "\t 1: Yes" << endl;
+        cout << "\t 2: No and leave" << RESET << endl;
         cout << "" << endl;
+            cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {
             case 1:
+                cout << string( 100, '\n' );
                 cout << "You sneak up behind him and kill them. You loot him and get his pistol" << endl
                 << "along with a tin of food. You rummage around the house and find some old" << endl         // possibly change this bit to use Will's search house code
                 << "tshirts you can use as rags and some magazines you could use as bite protection" << endl
@@ -683,6 +843,7 @@ void route_path()
                 route_path();
                 break;
             case 2:
+                cout << string( 100, '\n' );
                 cout << "You sneak out and leave the house, you go straight to your car and drive off." <<endl;
                 route_path();
                 break;
@@ -704,21 +865,39 @@ int neighbourCar()
         retry_neighbourCar:
         cout << "You go up to the front door and hear movement inside. how should you enter?" << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Front door" << endl;
-        cout << "/t 2: Back door" << endl;
-        cout << "/t 3: Leave it and go back to your car" << endl;
+        cout << YELLOW << "\t 1: Front door" << endl;
+        cout << "\t 2: Back door" << endl;
+        cout << "\t 3: Leave it and go back to your car" << RESET << endl;
         cout << "" << endl;
+            cout << "Enter your choice: ";
         cin >> input;
         
         switch (input)
         {
             case 1:
+                 cout << string( 100, '\n' );
                 cout << "you break the window in the front door. A looter inside was watching the window" << endl;
                 cout << "and shoots you in the head. you are dead." << endl;
-                cout << "\n Game over" << endl;
+                
+                 cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+                 cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+                 cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+                 cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+                 cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+                 cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "                                                                                       " << endl;
+                 cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+                 cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+                 cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+                 cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+                 cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+                 cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+                 cout << RESET;     
                 
                 break;
             case 2:
+                 cout << string( 100, '\n' );
                 cout << "You sneak around to the back door and see it has been forced open. You sneak in" << endl;
                 cout << "and see some guy, not your neighbour, watching the front door." << endl;
                 
@@ -726,6 +905,7 @@ int neighbourCar()
                 break;
                 
             case 3:   
+                 cout << string( 100, '\n' );
                 cout << "You go back to your car and drive off" << endl;
                 route_path();
                 break;
@@ -745,19 +925,22 @@ void car(){
         int input;
         {
         retry_car:
+            cout << string( 100, '\n' );
         cout << "You grab your car keys and whatever is to hand. You then head down to the" << endl;
         cout << "car and get in. After switching the engine on you see that there is little" << endl;
         cout << "fuel left in the tank. What should you do?" << endl;
         cout << "\n" << endl;
-        cout << "/t 1: Look in the garage for fuel" << endl;
-        cout << "/t 2: Try using a neighbours car, hope it has more fuel" << endl; //
-        cout << "/t 3: ignore it, there should be enough" << endl;
+        cout << YELLOW << "\t 1: Look in the garage for fuel" << endl;
+        cout << "\t 2: Try using a neighbours car, hope it has more fuel" << endl; //
+        cout << "\t 3: ignore it, there should be enough" << RESET << endl;
         cout << "" << endl;
+            cout << "Enter your choice: ";
         cin >> input;
         switch(input)
         {   
     
             case 1:    
+                   cout << string( 100, '\n' );
                     cout << "You go into the garage and look around and see fuel cans, a knife and some duck tape." << endl
                     << "You pick these items up and go back to the car." << endl
                     << "There isn't much fuel in the fuel cans but you pour what is there into the tank and " << endl
@@ -770,6 +953,7 @@ void car(){
     
     
             case 2:
+                     cout << string( 100, '\n' );
                     cout << "You leave the car and head over to your neighbour's house." << endl;
                     
                     neighbourCar();
@@ -777,6 +961,7 @@ void car(){
     
     
             case 3:
+                     cout << string( 100, '\n' );
                     cout << "you get into the car and start driving" << endl;
                     route_path();
                     break;

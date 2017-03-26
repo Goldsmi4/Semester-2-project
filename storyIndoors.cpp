@@ -284,7 +284,7 @@ void driveAway(){
              << "1. Accept offer " << endl
              << "2. Decline Offer " << endl;
              cin >> input;
-        switch (input)
+        switch (input)00
         {
             case 1:
                 cout << "Offer Accepted" << endl;
