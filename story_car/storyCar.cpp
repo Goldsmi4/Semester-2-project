@@ -27,6 +27,7 @@ using namespace std;
 void status();
 void load_stealth(string user_name);
 void car();
+void check();
 
     
 int car_run()
@@ -41,7 +42,7 @@ int car_run()
 int evacAttackZombie()          //last function where the player has to defeat a small group of zombies
 {                               //before he can enter the safe zone and win.
     {
-//finish line  
+check();
     }
 }
         
@@ -57,6 +58,7 @@ int evacRoofAttention()
         cout << YELLOW << "\t >> 1: Yes, they can help me" << endl;
         cout << "\t >> 2: No, Lets take a closer look" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -123,6 +125,7 @@ int evacRoof()
         cout << "" << endl; 
         
         retry_evacRoof:
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -161,6 +164,7 @@ int evacGateDash()
         cout << YELLOW << "\t 1: Yes its now or never" << endl;
         cout << "\t 2: No wait for them to move from the gate" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -215,6 +219,7 @@ int evacInvest()
        cout << YELLOW << "\t 1: Apartment roof to scout area" << endl;
         cout << "\t 2: Military vehicle" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -258,6 +263,7 @@ int evacDistract()
         cout << YELLOW << "\t 1: Yes" << endl;
         cout << "\t 2: No, wait a minute" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -310,6 +316,7 @@ int evacPointHorde()
         cout << "\t 2: Make a distraction and run for the main gate" << endl;
         cout << "\t 3: Use a car to ram the gate to get in" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -370,6 +377,7 @@ int apartmentChoice()
         cout << YELLOW << "\t 1: Yes they need my help" << endl;
         cout << "\t 2: No too risky" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -429,6 +437,7 @@ int apartmentLoot()
         cout << YELLOW << "\t 1: Yes." << endl;
         cout << "\t 2: No, carry on to the exacuation point." << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -466,6 +475,7 @@ int ringroadShop()
     cout << YELLOW << "\t 1: Yes" << endl;
     cout << "\t 2: no, i need to get out of here" << RESET << endl;
     cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
     cin >> input;
     switch (input)
@@ -509,6 +519,7 @@ int apartmentSurvivor()
         cout << YELLOW << "\t 1: Treat his wound the best you can and move him to the bed" << endl;
         cout << "\t 2: Look for his weapon and end it quickly for him" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -551,6 +562,7 @@ int apartmentSearch()
         cout << YELLOW << "\t 1: Yes" << endl;
         cout << "\t 2: No, carry on to the exacuation point" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -590,6 +602,7 @@ int gunshopEscape()
        cout << YELLOW << "\t 1: Investigate upstairs cautiously" << endl;
         cout << "\t 2: Look for an escape route" << RESET << endl;
         cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -649,6 +662,7 @@ int managerLock()
     cout << YELLOW << "\t 1: Leave, dont want to be stuck in here with them." << endl;
     cout << "\t 2: I have time to try a few more." << RESET << endl;
     cout << "" << endl;
+         status();
         cout << "Enter your choice: ";
     cin >> input;
     switch(input)
@@ -685,6 +699,7 @@ int lootRifle()
     cout << "\t 2: Accounting office" << endl;
     cout << "\t 3: Storage" << RESET << endl;
     cout << "" << endl;
+             status();
             cout << "Enter your choice: ";
     cin >> input;
     switch(input)
@@ -727,6 +742,7 @@ int lootGunshop()
     cout << YELLOW << "\t 1: Yes" <<endl;
     cout << "\t 2: No, they are too close." << RESET << endl;
     cout << "" << endl;
+             status();
             cout << "Enter your choice: ";
     cin >> input;
     switch(input)
@@ -760,6 +776,7 @@ void route_path()
         cout << "\t 2: Travel straight to the evacuation point. This will take you through residential areas but there is more chance to find things" << endl;
         cout << "\t 3: Go to the evacuation point via the gunshop downtown. There could be weapons there" << RESET << endl;
         cout << "" << endl;
+             status();
             cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -830,6 +847,7 @@ void route_path()
         cout << YELLOW << "\t 1: Yes" << endl;
         cout << "\t 2: No and leave" << RESET << endl;
         cout << "" << endl;
+             status();
             cout << "Enter your choice: ";
         cin >> input;
         switch(input)
@@ -869,6 +887,7 @@ int neighbourCar()
         cout << "\t 2: Back door" << endl;
         cout << "\t 3: Leave it and go back to your car" << RESET << endl;
         cout << "" << endl;
+             status();
             cout << "Enter your choice: ";
         cin >> input;
         
@@ -934,6 +953,7 @@ void car(){
         cout << "\t 2: Try using a neighbours car, hope it has more fuel" << endl; //
         cout << "\t 3: ignore it, there should be enough" << RESET << endl;
         cout << "" << endl;
+            status();
             cout << "Enter your choice: ";
         cin >> input;
         switch(input)

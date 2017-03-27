@@ -27,12 +27,12 @@ using namespace std;
 
 void status();
 void load_stealth(string user_name);
-
+void add_item2(string item);
 
 void opt();
 void living_room ();
 void search_room ();
-void kitchen ();
+void kitchen ();  //defined all functions at the top//
 void garage();
 void bathroom();
 void office();
@@ -40,14 +40,14 @@ void outside();
 
 
 
-int supplies()
+int supplies()//when story_supplies.cpp file is called,it tests if the function call is correct 
 {
     cout<<"==========================="<<endl;
     opt();
     return(0);
 }
 
-void office()
+void office() //office function 
     
 {
     
@@ -58,10 +58,10 @@ void office()
         cout << "You are in your ofice.." << endl;
         cout << MAGENTA <<  "(navigate around the house using directions)\n" << RESET << endl;
         
-        cout << YELLOW << "\t >> 1: Go forward " << endl;          
+        cout << YELLOW << "\t >> 1: Go forward " << endl; //colours implemented to make program more visually appealing          
         cout << "\t >> 2: Go backwards" << endl;   
         cout << "\t >> 3: Go left" << endl; 
-        cout << "\t >> 4: Go right" << endl; 
+        cout << "\t >> 4: Go right" << endl; // navigation options which takes user around house, user is only able to access specific areas depending on room
         cout << "\t >> 5: Go downstairs" << endl; 
         cout << "\t >> 6: Go upstairs" << endl; 
         cout << "\t >> 7: Search room" << RESET<< endl;                   
@@ -71,33 +71,33 @@ void office()
         cin >> input;
         
        
-       switch(input)
+       switch(input)// switch case for office function 
        {
            
            case 0:
-               cout<<"thanks for playing"<<endl;
+               cout<<"thanks for playing"<<endl;// if user presses 0, they will terminate program 
                exit(0);
                
            case 1:
                
                cout << "Walking forward takes you to a dead end" << endl;
                cout << "Try another direction or search the room" << endl;
-               goto retry_office;
+               goto retry_office;//user is unable to travel in this direction try somewhere else 
                
                break;
            case 2:
                cout << string( 100, '\n' );
-               opt();
+               opt(); //opt function called (bedroom)
                
                break;
            case 3:
                cout << "You cannot go left as there is a wall" << endl;
                cout << "Try another direction or search the room" << endl;
-               goto retry_office;
+               goto retry_office;//user unable to go in this direction
                
                break;
            case 4:
-               cout << "You make your way to the bathroom" << endl;
+               cout << "your unable to go in this direction" << endl;
                goto retry_office;
                
                break;
@@ -115,12 +115,12 @@ void office()
                break;
            case 7:
                cout << string( 100, '\n' );
-               search_room();
+               search_room();//search_room function called where user will be able to find items and store in inventory 
                break;
                
            default:
                cout << RED << "[ERROR] Invalid option please choose between 1 and 7" << RESET << endl;
-                goto retry_office;
+                goto retry_office;//error check, if invalid input, user will be returned to input 
          }
     
                
@@ -136,7 +136,7 @@ void outside(){
     }
 }
 
-void living_room() 
+void living_room() //living_room class 
     
 {
     
@@ -170,7 +170,7 @@ void living_room()
                exit(0);
                
            case 1:
-               cout << string( 100, '\n' );
+               cout << string( 100, '\n' );//line breaker in order to clean up presentation of program 
                outside();
 
                
@@ -219,36 +219,41 @@ void living_room()
 }
 
 
-void search_room() {
+void search_room() {//search rooms function
     
    
     int input;
     
     {
+        /*within this function, my sql database will be used to manage the items within this function
+        when user calls search_room , a random supply drop will be generated, if not, no supply drop
+        user is then able to pick it up and it is then saved in the database and stored in the user
+        inventory. they are displayed at the bottom of the program with the user status */
+        
         
         cout <<"while searching round the room you come across  "<<endl;
-        cout <<"\t 1. a lighter"<<endl;
-        cout <<"\t 2. pair of batteries"<<endl;
-        cout <<"\t 3. knife"<<endl;
+        cout <<"\t 1. Can of coke"<<endl;
+        cout <<"\t 2. Pistol"<<endl;
+        cout <<"\t 3. Knife"<<endl;
         
-        //ITEMS
-        
+
+         retry_search:
         cout <<"\n"<<endl;
         cout <<"\n which one do you want to pick up"<<endl;
         cout <<"\t 4. return to previous position"<<endl;
         cout <<" or enter [4] to return to previous position"<<endl;
-        retry_search:
+       
         cin >>input;
         switch (input)
         {
            case 1:
-               cout<<"You have aquired a lighter"<< endl;
+                add_item2("Can of coke");
                 goto retry_search;
                 //ITEM
                break;
            
            case 2:
-               cout<<"You picked up a pair of batteries"<< endl;
+               add_item2("Pistol");
                cout<<"Carry on searching the house to find something "<<endl;
                cout<<"To use them on"<<endl;
                 //ITEM
@@ -257,8 +262,7 @@ void search_room() {
                break;
                
            case 3:
-               
-               cout << "You have picked up a knife"<<endl;
+               add_item2("Knife");
                 //ITEM
                 goto retry_search;
               
@@ -277,7 +281,7 @@ void search_room() {
     }
 }
 
-void kitchen(){
+void kitchen(){//kitchen function to allow navigation of the kitchen 
 {
  
     int input;
@@ -357,7 +361,7 @@ void kitchen(){
 }
 
 
-void bathroom(){
+void bathroom(){//bathroom function 
 {
     int input;
 
@@ -381,7 +385,7 @@ void bathroom(){
        switch(input)
            {
 
-               case 0:
+               case 0://case switch statments depending on user navigation input 
                    cout<<"thanks for playing"<<endl;
                    exit(0);
 
@@ -438,7 +442,9 @@ void bathroom(){
 void garage (){    
     int input;
     {
-        
+        /*within this function, the user is given the option to leave and continue there journey outside, story_supplies
+        only unfolds the supplies collection stage therefore we need an option to allow the user to continue the game 
+        storyline path, this has been done by giving the user the option to escape the house on foot or by car in the garage*/
         cout << "Your in the garage, there is a car.. \n" << endl;
         cout << YELLOW << "\t >> 1: Take car " << endl;          
         cout << "\t >> 2: Return to the living room" << RESET<< endl;       
@@ -450,14 +456,14 @@ void garage (){
         
         if (input==1){
              cout << string( 100, '\n' );
-            car_run();
+            car_run();//if user selects 1, the car function is called and the story continues on wheels 
             
             
         }
         
         else if (input==2){
              cout << string( 100, '\n' );
-            living_room();
+            living_room();//if not the user is returned to there living room, they are still able to access the garage 
         }
         
         else
@@ -475,6 +481,9 @@ void opt()
     
     
     {
+        /*main start point of game is user bedroom, here they have woken up and need to navigate the whole house using simple inputs
+        user has to use trial and error in order to find there way around the house map, this is fairly simple as all the options are displayed below
+        some inputs will not take user anywhere as it follows a game map which as a code breaking mind game, user has to find out the layout of the house*/
         cout << string( 100, '\n' );
          cout << "Your in your room.. \n" << endl;
          cout << MAGENTA <<  "(navigate around the house using directions)\n" << RESET << endl;
@@ -535,4 +544,3 @@ void opt()
              } 
    }
 }
-

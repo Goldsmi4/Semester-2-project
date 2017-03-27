@@ -101,7 +101,7 @@ void temp(){
     int input;
     {
         cout << "9mm Pistol has been added to you're inventory\n" << endl;
-        // ADD ITEM HERE
+         cout << "Or not cause I dont use any database... -,-' " << endl;
         cout << YELLOW << "\t >> 1: Go outside " << endl;                             
         cout << "\t >> 2: Shout for help" << RESET<< endl;                   
         status();

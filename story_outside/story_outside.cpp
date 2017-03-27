@@ -25,6 +25,7 @@
 using namespace std;
 
 void status();
+void remove_hp(int how_much);
 void load_stealth(string user_name);
 
 void outside_path();
@@ -361,8 +362,7 @@ void inside_building()                      //leads on from the 3rd option in it
         
         case 1:
             cout << string( 100, '\n' );
-            cout << "You find a backpack that could possibly help you hold more things should you find them" << endl;
-            //get item
+            cout << "Notting much.. Some rust cans.." << endl;
             cout << "You then leave the building to search elsewhere" << endl;
             station();
             
@@ -416,6 +416,7 @@ void building()                     // This branch is the 3rd option, the buildi
         case 1:
             cout << string( 100, '\n' );
             cout << "You smash the window open but sustained an injury in the process" << endl;
+             remove_hp(30);
             cout << "\n" << endl;
             inside_building();
         

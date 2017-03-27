@@ -360,6 +360,8 @@ void building()                     // This branch is the 3rd option, the buildi
         
         case 1:
             cout << "You smash the window open but sustained an injury in the process" << endl;
+             Game_User.hp =  Game_User.hp-30;
+             cout <<  Game_User.hp;
             cout << "\n" << endl;
             inside_building();
         

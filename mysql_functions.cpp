@@ -41,10 +41,40 @@ public:
     int level;
     int gender;
     int hp;
+    string name_item;
+    int type_item;
 };
 
-Player Game_User;
+class Inventory
+{
+public:
+    string name;
+    int type;
+};
 
+class Item
+{
+public:
+        void createItem(int id, string name, int condition, int type, int attack ) {
+        this->id = id;
+        this->name = name;
+        this->condition = condition;
+        this->type = type;
+        this->attack = attack;
+        }
+    
+    int id;
+    string name;
+    int condition;
+    int type;
+    int attack;
+};
+
+
+
+
+Player Game_User;
+Inventory Main_inventory;
 void status(){
     cout << endl;
     
@@ -61,7 +91,11 @@ void status(){
     
     cout << BOLDCYAN << "|--- " << RESET << "Name: " << BOLDBLUE << Game_User.name << RESET << MAGENTA << " || " << RESET << "Level: " << YELLOW << Game_User.level << RESET << MAGENTA << " || " << RESET << "Health Points: " << BOLDCYAN << Game_User.hp << RESET << MAGENTA << " || " << RESET << "Gender: " << YELLOW;
     if(Game_User.gender == 1) { cout << "Female" << RESET << MAGENTA << " || " << RESET; } else { cout << "Male" << RESET << MAGENTA << " || " << RESET; }
-    cout << "Backpack: " << RED << "EMPTY" << RESET << BOLDCYAN << " ---|" << RESET << endl; 
+    cout << "Backpack: " << RED;
+
+        cout << RESET << GREEN << Main_inventory.name << RESET;
+    
+         cout << RESET << BOLDCYAN << " ---|" << RESET << endl; 
     
 }
 
@@ -90,7 +124,6 @@ void load(string get_name) {
                 Game_User.level = res->getInt("level");
                 Game_User.gender = res->getInt("gender");
                 Game_User.hp = res->getInt("health");
-                
           }
             else {
            cout << YELLOW << "Welcome new adventurer, please tell me what is your gender? (m/f): " << RESET;
@@ -173,3 +206,44 @@ void load_stealth(string get_name) {
 
 }
 
+void remove_hp(int how_much){
+     Game_User.hp =  Game_User.hp - how_much;    
+}
+
+
+void add_item2(string item){
+    Main_inventory.name = item;    
+}
+
+void check() {
+    if(Main_inventory.name != ""){
+                        cout << "U killed a zombie, well done.. U are free";
+ cout << GREEN << "   _____  ____   _   _   _____  _____          _______  _    _  _              _______  _____  ____   _   _   _____ " << endl;
+ cout << GREEN << "  / ____|/ __ \\ | \\ | | / ____||  __ \\     /\\ |__   __|| |  | || |         /\\ |__   __||_   _|/ __ \\ | \\ | | / ____|" << endl;
+ cout << GREEN << " | |    | |  | ||  \\| || |  __ | |__) |   /  \\   | |   | |  | || |        /  \\   | |     | | | |  | ||  \\| || (___  " << endl;
+ cout << GREEN << " | |    | |  | || . ` || | |_ ||  _  /   / /\\ \\  | |   | |  | || |       / /\\ \\  | |     | | | |  | || . ` | \\___ \\ " << endl;
+ cout << GREEN << " | |____| |__| || |\\  || |__| || | \\ \\  / ____ \\ | |   | |__| || |____  / ____ \\ | |    _| |_| |__| || |\\  | ____) |" << endl;
+ cout << GREEN << "  \\_____|\\____/ |_| \\_| \\_____||_|  \\_\\/_/    \\_\\|_|    \\____/ |______|/_/    \\_\\|_|   |_____|\\____/ |_| \\_||_____/ " << endl;
+ cout << GREEN << "                                                                                                                    " << endl;
+  cout << RESET;       
+    } else {
+        cout << "U dont any items to defend yourself";
+         cout << RED << "  _____          __  __ ______      ______      ________ _____                        " << endl;
+ cout << RED << " / ____|   /\\   |  \\/  |  ____|    / __ \\ \\    / |  ____|  __ \\                        " << endl;
+ cout << RED << "| |  __   /  \\  | \\  / | |__      | |  | \\ \\  / /| |__  | |__) |                       " << endl;
+ cout << RED << "| | |_ | / /\\ \\ | |\\/| |  __|     | |  | |\\ \\/ / |  __| |  _  /                        " << endl;
+ cout << RED << "| |__| |/ ____ \\| |  | | |____    | |__| | \\  /  | |____| | \\ \\                        " << endl;
+ cout << RED << " \\_____/_/    \\_|_|  |_|______|    \\____/   \\/   |______|_|  \\_\\                       " << endl;
+ cout << RED << "                                                                                       " << endl;
+ cout << RED << "                                                                                       " << endl;
+ cout << RED << "__     ______  _    _               _____  ______       _____  ______          _____   " << endl;
+ cout << RED << "\\ \\   / / __ \\| |  | |        /\\   |  __ \\|  ____|     |  __ \\|  ____|   /\\   |  __ \\  " << endl;
+ cout << RED << " \\ \\_/ | |  | | |  | |       /  \\  | |__) | |__        | |  | | |__     /  \\  | |  | | " << endl;
+ cout << RED << "  \\   /| |  | | |  | |      / /\\ \\ |  _  /|  __|       | |  | |  __|   / /\\ \\ | |  | | " << endl;
+ cout << RED << "   | | | |__| | |__| |     / ____ \\| | \\ \\| |____      | |__| | |____ / ____ \\| |__| | " << endl;
+ cout << RED << "   |_|  \\____/ \\____/     /_/    \\_|_|  \\_|______|     |_____/|______/_/    \\_|_____/  " << endl;
+ cout << RESET;                                                                                
+                     
+    }
+    
+}
